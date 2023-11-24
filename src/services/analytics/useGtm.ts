@@ -95,7 +95,7 @@ const useGtm = () => {
 
   useEffect(() => {
     if (wallet?.address) {
-      gtmSetUserProperty(AnalyticsUserProperties.WALLET_ADDRESS, wallet.address.slice(2)) // Remove 0x prefix
+      gtmSetUserProperty(AnalyticsUserProperties.WALLET_ADDRESS, wallet.address)
       spindlAttribute(wallet.address)
     }
   }, [wallet?.address])
