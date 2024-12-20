@@ -7,18 +7,20 @@ import {
   SidebarListItemIcon,
   SidebarListItemText,
 } from '@/components/sidebar/SidebarList'
-import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
+import { /*BEAMER_SELECTOR,*/ loadBeamer } from '@/services/beamer'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 import { openCookieBanner } from '@/store/popupSlice'
-import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
+// import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
-import { ListItem } from '@mui/material'
+import { ListItem, SvgIcon, Typography } from '@mui/material'
 import DebugToggle from '../DebugToggle'
 import { HELP_CENTER_URL, IS_PRODUCTION } from '@/config/constants'
 import Track from '@/components/common/Track'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import { useCurrentChain } from '@/hooks/useChains'
+import ProtofireLogo from '@/public/images/protofire-logo.svg'
+import ExternalLink from '@/components/common/ExternalLink'
 
 const SidebarFooter = (): ReactElement => {
   const dispatch = useAppDispatch()
@@ -46,7 +48,7 @@ const SidebarFooter = (): ReactElement => {
         </ListItem>
       )}
 
-      <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
+      {/* <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
         <ListItem disablePadding>
           <SidebarListItemButton id={BEAMER_SELECTOR} onClick={handleBeamer}>
             <SidebarListItemIcon color="primary">
@@ -57,7 +59,7 @@ const SidebarFooter = (): ReactElement => {
             </SidebarListItemText>
           </SidebarListItemButton>
         </ListItem>
-      </Track>
+      </Track> */}
 
       <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
         <ListItem disablePadding>
@@ -73,6 +75,22 @@ const SidebarFooter = (): ReactElement => {
           </a>
         </ListItem>
       </Track>
+      <ListItem>
+        <SidebarListItemText>
+          <Typography variant="caption">
+            Supported by{' '}
+            <SvgIcon
+              component={ProtofireLogo}
+              inheritViewBox
+              fontSize="small"
+              sx={{ verticalAlign: 'middle', mx: 0.5 }}
+            />
+            <ExternalLink href="https://protofire.io" sx={{ textDecoration: 'none' }} noIcon>
+              Protofire
+            </ExternalLink>
+          </Typography>
+        </SidebarListItemText>
+      </ListItem>
     </SidebarList>
   )
 }
