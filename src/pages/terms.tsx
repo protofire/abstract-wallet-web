@@ -1,39 +1,38 @@
+import { TERMS_LINK } from '@/config/constants'
+import { Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { IS_OFFICIAL_HOST } from '@/config/constants'
-import SafeTerms from '@/markdown/terms/terms.md'
-import type { LinkProps as NextLinkProps } from 'next/link'
-import NextLink from 'next/link'
-import type { LinkProps as MUILinkProps } from '@mui/material/Link'
-import MUILink from '@mui/material/Link'
-import type { MDXComponents } from 'mdx/types'
+import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
-const CustomLink: React.FC<
-  React.PropsWithChildren<Omit<MUILinkProps, 'href'> & Pick<NextLinkProps, 'href' | 'as'>>
-> = ({ href = '', as, children, ...other }) => {
-  const isExternal = href.toString().startsWith('http')
-  return (
-    <NextLink href={href} as={as} passHref legacyBehavior>
-      <MUILink target={isExternal ? '_blank' : ''} rel="noreferrer" {...other}>
-        {children}
-      </MUILink>
-    </NextLink>
-  )
-}
+const SafeTerms = () => {
+  const [content, setContent] = useState<string>('')
 
-const overrideComponents: MDXComponents = {
-  // @ts-expect-error
-  a: CustomLink,
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const response = await fetch(TERMS_LINK)
+        const text = await response.text()
+        setContent(text)
+      } catch (error) {
+        console.error('Error fetching terms:', error)
+      }
+    }
+
+    fetchContent()
+  }, [])
+
+  return <main>{content ? <ReactMarkdown>{content}</ReactMarkdown> : <Typography>Loading terms...</Typography>}</main>
 }
 
 const Terms: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{'Abstract Safe Wallet – Terms'}</title>
+        <title>{'Terms and Conditions'}</title>
       </Head>
 
-      <main>{IS_OFFICIAL_HOST && <SafeTerms components={overrideComponents} />}</main>
+      <main>{<SafeTerms />}</main>
     </>
   )
 }
