@@ -47,9 +47,9 @@ const Footer = (): ReactElement | null => {
     <footer className={css.container}>
       <ul>
         <>
-          <li>
+          {/* <li>
             <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
-          </li>
+          </li> */}
           <li>
             <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
           </li>
@@ -88,9 +88,9 @@ const Footer = (): ReactElement | null => {
             </Typography>
           </li>
         </>
-        <li>
+        {/* <li>
           <AppstoreButton placement="footer" />
-        </li>
+        </li> */}
       </ul>
     </footer>
   )

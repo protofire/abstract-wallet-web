@@ -5,7 +5,6 @@ import { Grid, Button, Checkbox, FormControlLabel, Typography, Paper, SvgIcon, B
 import WarningIcon from '@/public/images/notifications/warning.svg'
 import { useForm } from 'react-hook-form'
 import { metadata } from '@/markdown/terms/terms.md'
-
 import { useAppDispatch, useAppSelector } from '@/store'
 import {
   selectCookies,
@@ -18,11 +17,12 @@ import { selectCookieBanner, openCookieBanner, closeCookieBanner } from '@/store
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
 import ExternalLink from '../ExternalLink'
+import Link from 'next/link'
 
 const COOKIE_AND_TERM_WARNING: Record<CookieAndTermType, string> = {
   [CookieAndTermType.TERMS]: '',
   [CookieAndTermType.NECESSARY]: '',
-  [CookieAndTermType.UPDATES]: `You attempted to open the "What's new" section but need to accept the "Beamer" cookies first.`,
+  [CookieAndTermType.UPDATES]: ``,
   [CookieAndTermType.ANALYTICS]: '',
 }
 
@@ -87,10 +87,17 @@ export const CookieAndTermBanner = ({
           <Grid item xs>
             <Typography variant="body2" mb={2}>
               By browsing this page, you accept our{' '}
-              <ExternalLink href={AppRoutes.terms}>Terms & Conditions</ExternalLink> (last updated{' '}
-              {metadata.last_update_date}) and the use of necessary cookies. By clicking &quot;Accept all&quot; you
-              additionally agree to the use of Beamer and Analytics cookies as listed below.{' '}
-              <ExternalLink href={AppRoutes.cookie}>Cookie policy</ExternalLink>
+              <u>
+                <Link href={AppRoutes.terms} passHref legacyBehavior>
+                  Terms & Conditions
+                </Link>
+              </u>{' '}
+              (last updated October 2024) and the use of necessary cookies.{' '}
+              <u>
+                <Link href={AppRoutes.cookie} passHref legacyBehavior>
+                  Cookie policy
+                </Link>
+              </u>{' '}
             </Typography>
 
             <Grid container alignItems="center" gap={4}>
@@ -101,7 +108,7 @@ export const CookieAndTermBanner = ({
                   <Typography variant="body2">Locally stored data for core functionality</Typography>
                 </Box>
 
-                <Box mb={2}>
+                {/* <Box mb={2}>
                   <CookieCheckbox
                     checkboxProps={{ ...register(CookieAndTermType.UPDATES), id: 'beamer' }}
                     label="Beamer"
@@ -121,18 +128,18 @@ export const CookieAndTermBanner = ({
                   <Typography variant="body2">
                     Opt in for Google Analytics cookies to help us analyze app usage patterns.
                   </Typography>
-                </Box>
+                </Box> */}
               </Grid>
             </Grid>
 
             <Grid container alignItems="center" justifyContent="center" mt={4} gap={2}>
-              <Grid item>
+              {/* <Grid item>
                 <Typography>
                   <Button onClick={handleAccept} variant="text" size="small" color="inherit" disableElevation>
                     Save settings
                   </Button>
                 </Typography>
-              </Grid>
+              </Grid> */}
 
               <Grid item>
                 <Button onClick={handleAcceptAll} variant="contained" color="secondary" size="small" disableElevation>
@@ -162,7 +169,7 @@ const CookieBannerPopup = (): ReactElement | null => {
     }
   }, [dispatch, shouldOpen])
 
-  return cookiePopup.open ? (
+  return cookiePopup?.open ? (
     <div className={css.popup}>
       <CookieAndTermBanner warningKey={cookiePopup.warningKey} inverted />
     </div>
