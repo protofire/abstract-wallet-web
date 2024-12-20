@@ -32,7 +32,7 @@ const Appearance: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{'Safe{Wallet} – Settings – Appearance'}</title>
+        <title>{'Abstract Safe Wallet – Settings – Appearance'}</title>
       </Head>
 
       <SettingsHeader />

@@ -1,13 +1,13 @@
-# <img src="/public/images/logo.svg" height="60" valign="middle" alt="Safe{Wallet}" style="background: #fff; padding: 20px; margin: 0 -20px" />
+# <img src="/public/images/logo.svg" height="60" valign="middle" alt="Abstract Safe Wallet" style="background: #fff; padding: 20px; margin: 0 -20px" />
 
 [![License](https://img.shields.io/github/license/safe-global/safe-wallet-web)](https://github.com/safe-global/safe-wallet-web/blob/main/LICENSE)
 ![Tests](https://img.shields.io/github/actions/workflow/status/safe-global/safe-wallet-web/test.yml?branch=main&label=tests)
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/safe-global/safe-wallet-web)
 [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/safe-global/safe-wallet-web/badge)](https://www.gitpoap.io/gh/safe-global/safe-wallet-web)
 
-Safe{Wallet} is a smart contract wallet for Ethereum and other EVM chains. Based on Gnosis Safe multisig contracts.
+Abstract Safe Wallet is a smart contract wallet for Ethereum and other EVM chains. Based on Gnosis Safe multisig contracts.
 
-This repository is the frontend of the Safe{Wallet} app.
+This repository is the frontend of the Abstract Safe Wallet app.
 
 ## Contributing
 
