@@ -8,7 +8,7 @@ import {
   SidebarListItemText,
 } from '@/components/sidebar/SidebarList'
 import { /*BEAMER_SELECTOR,*/ loadBeamer } from '@/services/beamer'
-import { useAppDispatch, useAppSelector } from '@/store'
+import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 // import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
@@ -22,7 +22,7 @@ import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import ExternalLink from '@/components/common/ExternalLink'
 
 const SidebarFooter = (): ReactElement => {
-  const dispatch = useAppDispatch()
+  //const dispatch = useAppDispatch()
   const chain = useCurrentChain()
   const hasBeamerConsent = useAppSelector((state) => hasConsentFor(state, CookieAndTermType.UPDATES))
 
