@@ -593,22 +593,33 @@ index 32f8218..b609796 100644
          "33401": "canonical",
          "34443": ["canonical", "eip155"],
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/compatibility_fallback_handler.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/compatibility_fallback_handler.json
-index 1a24cb1..d7525c8 100644
+index 1a24cb1..aa1e235 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/compatibility_fallback_handler.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/compatibility_fallback_handler.json
-@@ -21,9 +21,10 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0xfd0732Dc9E303f09fCEf3a7388Ad10A83459Ec99",
+             "codeHash": "0x7c6007a5d711cea8dfd5d91f5940ec29c7f200fe511eb1fc1397b367af3c42f9"
++        },
++        "zksync": {
++            "address": "0x9301E98DD367135f21bdF66f342A249c9D5F9069",
++            "codeHash": "0x331ff834e83e6e1596325f04eb7d16614155e324010af21f14e9c945e7669d5f"
+         }
+     },
+     "networkAddresses": {
+@@ -21,9 +25,10 @@
          "41": "canonical",
          "56": "canonical",
          "71": "canonical",
 -        "81": "canonical",
          "97": "canonical",
          "100": "canonical",
-+        "11124": "0x9301E98DD367135f21bdF66f342A249c9D5F9069",
-+        "2741": "0x9301E98DD367135f21bdF66f342A249c9D5F9069",
++        "11124": "zksync",
++        "2741": "zksync",
          "114": "canonical",
          "137": "canonical",
          "155": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -617,7 +628,7 @@ index 1a24cb1..d7525c8 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -626,15 +637,26 @@ index 1a24cb1..d7525c8 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/create_call.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/create_call.json
-index 0509d23..9c8f919 100644
+index 0509d23..777a492 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/create_call.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/create_call.json
-@@ -16,12 +16,13 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x9b35Af71d77eaf8d7e40252370304687390A1A52",
+             "codeHash": "0x2b3060c55fcb8275653e99ad511a71f67ba76934ed66a7d74d6e68b52afff889"
++        },
++        "zksync": {
++            "address": "0xAAA566Fe7978bB0fb0B5362B7ba23038f4428D8f",
++            "codeHash": "0x3aa5b033c45ab4866216847b12f15bca9a94c66ad5bbfbbbc42cc778079059d4"
+         }
+     },
+     "networkAddresses": {
+@@ -16,12 +20,13 @@
          "16": "canonical",
          "19": "canonical",
          "25": "canonical",
-+        "11124": "0xAAA566Fe7978bB0fb0B5362B7ba23038f4428D8f",
-+        "2741": "0xAAA566Fe7978bB0fb0B5362B7ba23038f4428D8f",
++        "11124": "zksync",
++        "2741": "zksync",
          "31": "canonical",
          "40": "canonical",
          "41": "canonical",
@@ -644,7 +666,7 @@ index 0509d23..9c8f919 100644
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -653,7 +675,7 @@ index 0509d23..9c8f919 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -662,22 +684,33 @@ index 0509d23..9c8f919 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send.json
-index d1021c1..b2bcd11 100644
+index d1021c1..2c64242 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send.json
-@@ -19,9 +19,10 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x38869bf66a61cF6bDB996A6aE40D5853Fd43B526",
+             "codeHash": "0x0e4f7fc66550a322d1e7688e181b75e217e662a4f3f4d6a29b22bc61217c4b77"
++        },
++        "zksync": {
++            "address": "0x309D0B190FeCCa8e1D5D8309a16F7e3CB133E885",
++            "codeHash": "0xcb372f27aba6983e7b54997ebb4a75c35876b2a279238ab914c5415de1e95137"
+         }
+     },
+     "networkAddresses": {
+@@ -19,9 +23,10 @@
          "31": "canonical",
          "40": "canonical",
          "41": "canonical",
-+        "11124": "0x309D0B190FeCCa8e1D5D8309a16F7e3CB133E885",
-+        "2741": "0x309D0B190FeCCa8e1D5D8309a16F7e3CB133E885",
++        "11124": "zksync",
++        "2741": "zksync",
          "56": "canonical",
          "71": "canonical",
 -        "81": "canonical",
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -686,7 +719,7 @@ index d1021c1..b2bcd11 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -695,20 +728,31 @@ index d1021c1..b2bcd11 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send_call_only.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send_call_only.json
-index 55f8c89..9c658c2 100644
+index 55f8c89..28cadad 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send_call_only.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/multi_send_call_only.json
-@@ -21,7 +21,8 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x9641d764fc13c8B624c04430C7356C1C7C8102e2",
+             "codeHash": "0xecd5bd14a08c5d2122379900b2f272bdf107a7e92423c10dd5fe3254386c9939"
++        },
++        "zksync": {
++            "address": "0x0408EF011960d02349d50286D20531229BCef773",
++            "codeHash": "0x44c70b30fed5c3a07358a52c2fb028f651031010ef99e4d8c3b45c208e88a264"
+         }
+     },
+     "networkAddresses": {
+@@ -21,7 +25,8 @@
          "41": "canonical",
          "56": "canonical",
          "71": "canonical",
 -        "81": "canonical",
-+        "11124": "0x0408EF011960d02349d50286D20531229BCef773",
-+        "2741": "0x0408EF011960d02349d50286D20531229BCef773",
++        "11124": "zksync",
++        "2741": "zksync",
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -717,7 +761,7 @@ index 55f8c89..9c658c2 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -726,22 +770,33 @@ index 55f8c89..9c658c2 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe.json
-index f32a781..ec11040 100644
+index f32a781..04978b6 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe.json
-@@ -19,9 +19,10 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x41675C099F32341bf84BFc5382aF534df5C7461a",
+             "codeHash": "0x1fe2df852ba3299d6534ef416eefa406e56ced995bca886ab7a553e6d0c5e1c4"
++        },
++        "zksync": {
++            "address": "0xC35F063962328aC65cED5D4c3fC5dEf8dec68dFa",
++            "codeHash": "0xfa4d4fc0fa9f1a061571a3f3f66502464edf1a519ab1ab93dc232addf4fbe30f"
+         }
+     },
+     "networkAddresses": {
+@@ -19,9 +23,10 @@
          "31": "canonical",
          "40": "canonical",
          "41": "canonical",
-+        "11124": "0xC35F063962328aC65cED5D4c3fC5dEf8dec68dFa",
-+        "2741": "0xC35F063962328aC65cED5D4c3fC5dEf8dec68dFa",
++        "11124": "zksync",
++        "2741": "zksync",
          "56": "canonical",
          "71": "canonical",
 -        "81": "canonical",
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -750,7 +805,7 @@ index f32a781..ec11040 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -759,20 +814,31 @@ index f32a781..ec11040 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_l2.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_l2.json
-index 3ab81d2..179c1e1 100644
+index 3ab81d2..39298b0 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_l2.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_l2.json
-@@ -21,7 +21,8 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x29fcB43b46531BcA003ddC8FCB67FFE91900C762",
+             "codeHash": "0xb1f926978a0f44a2c0ec8fe822418ae969bd8c3f18d61e5103100339894f81ff"
++        },
++        "zksync": {
++            "address": "0x610fcA2e0279Fa1F8C00c8c2F71dF522AD469380",
++            "codeHash": "0x520462ebe1156cd2d37b1d470c57f23e12fe0c4cda4c62502d96e03fa0cb44da"
+         }
+     },
+     "networkAddresses": {
+@@ -21,7 +25,8 @@
          "41": "canonical",
          "56": "canonical",
          "71": "canonical",
 -        "81": "canonical",
-+        "11124": "0x610fcA2e0279Fa1F8C00c8c2F71dF522AD469380",
-+        "2741": "0x610fcA2e0279Fa1F8C00c8c2F71dF522AD469380",
++        "11124": "zksync",
++        "2741": "zksync",
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -781,7 +847,7 @@ index 3ab81d2..179c1e1 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -790,10 +856,20 @@ index 3ab81d2..179c1e1 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_migration.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_migration.json
-index adcf10f..bd3d5a5 100644
+index adcf10f..c46dd96 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_migration.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_migration.json
-@@ -12,18 +12,15 @@
+@@ -6,24 +6,25 @@
+         "canonical": {
+             "address": "0x526643F69b81B008F46d95CD5ced5eC0edFFDaC6",
+             "codeHash": "0xc00d7921460cd5a05393e7772e634bd7d212f356356aa3a77f0120a9b8e25e99"
++        },
++        "zksync": {
++            "address": "0x817756C6c555A94BCEE39eB5a102AbC1678b09A7",
++            "codeHash": "0x331ff834e83e6e1596325f04eb7d16614155e324010af21f14e9c945e7669d5f"
+         }
+     },
+     "networkAddresses": {
          "1": "canonical",
          "10": "canonical",
          "56": "canonical",
@@ -807,23 +883,34 @@ index adcf10f..bd3d5a5 100644
          "1101": "canonical",
          "1337": "canonical",
          "5000": "canonical",
-+        "11124": "0x817756C6c555A94BCEE39eB5a102AbC1678b09A7",
-+        "2741": "0x817756C6c555A94BCEE39eB5a102AbC1678b09A7",
++        "11124": "zksync",
++        "2741": "zksync",
          "8453": "canonical",
 -        "10081": "canonical",
          "42161": "canonical",
          "42220": "canonical",
          "43114": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_proxy_factory.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_proxy_factory.json
-index fd11c33..6b6e672 100644
+index fd11c33..a6b1372 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_proxy_factory.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_proxy_factory.json
-@@ -18,10 +18,11 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67",
+             "codeHash": "0x50c3cdc4074750a7a974204a716c999edd37482f907608d960b2b025ee0b3317"
++        },
++        "zksync": {
++            "address": "0xc329D02fd8CB2fc13aa919005aF46320794a8629",
++            "codeHash": "0xa4915e4a50124b5dce3c9adc34cce8108fc5dbda97d443534699621d6e0013ba"
+         }
+     },
+     "networkAddresses": {
+@@ -18,10 +22,11 @@
          "25": "canonical",
          "31": "canonical",
          "40": "canonical",
-+        "11124": "0xc329D02fd8CB2fc13aa919005aF46320794a8629",
-+        "2741": "0xc329D02fd8CB2fc13aa919005aF46320794a8629",
++        "11124": "zksync",
++        "2741": "zksync",
          "41": "canonical",
          "56": "canonical",
          "71": "canonical",
@@ -831,7 +918,7 @@ index fd11c33..6b6e672 100644
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -840,7 +927,7 @@ index fd11c33..6b6e672 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -849,10 +936,20 @@ index fd11c33..6b6e672 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_migration.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_migration.json
-index bd0078a..04cbc5a 100644
+index bd0078a..aa33ada 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_migration.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_migration.json
-@@ -12,18 +12,15 @@
+@@ -6,24 +6,25 @@
+         "canonical": {
+             "address": "0xfF83F6335d8930cBad1c0D439A841f01888D9f69",
+             "codeHash": "0xa83e7be2fa20c96dc9575e3937239d552f3831ea437d7c96397eec8736f0cba0"
++        },
++        "zksync": {
++            "address": "0xa26620d1f8f1a2433F0D25027F141aaCAFB3E590",
++            "codeHash": "0x331ff834e83e6e1596325f04eb7d16614155e324010af21f14e9c945e7669d5f"
+         }
+     },
+     "networkAddresses": {
          "1": "canonical",
          "10": "canonical",
          "56": "canonical",
@@ -868,16 +965,26 @@ index bd0078a..04cbc5a 100644
          "5000": "canonical",
          "8453": "canonical",
 -        "10081": "canonical",
-+        "11124": "0xa26620d1f8f1a2433F0D25027F141aaCAFB3E590",
-+        "2741": "0xa26620d1f8f1a2433F0D25027F141aaCAFB3E590",
++        "11124": "zksync",
++        "2741": "zksync",
          "42161": "canonical",
          "42220": "canonical",
          "43114": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_setup.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_setup.json
-index 5deb8d6..11c7c6a 100644
+index 5deb8d6..a2b1210 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_setup.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/safe_to_l2_setup.json
-@@ -12,18 +12,15 @@
+@@ -6,24 +6,25 @@
+         "canonical": {
+             "address": "0xBD89A1CE4DDe368FFAB0eC35506eEcE0b1fFdc54",
+             "codeHash": "0x2f25df28caf984366ee584e13241707e85dcd5a6ea0c14267928dafc1fd6274b"
++        },
++        "zksync": {
++            "address": "0x9301E98DD367135f21bdF66f342A249c9D5F9069",
++            "codeHash": "0x331ff834e83e6e1596325f04eb7d16614155e324010af21f14e9c945e7669d5f"
+         }
+     },
+     "networkAddresses": {
          "1": "canonical",
          "10": "canonical",
          "56": "canonical",
@@ -893,27 +1000,38 @@ index 5deb8d6..11c7c6a 100644
          "5000": "canonical",
          "8453": "canonical",
 -        "10081": "canonical",
-+        "11124": "0x199A9df0224031c20Cc27083A4164c9c8F1Bcb39",
-+        "2741": "0x199A9df0224031c20Cc27083A4164c9c8F1Bcb39",
++        "11124": "zksync",
++        "2741": "zksync",
          "42161": "canonical",
          "42220": "canonical",
          "43114": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/sign_message_lib.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/sign_message_lib.json
-index 7e8a185..1c7fb58 100644
+index 7e8a185..9f2b986 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/sign_message_lib.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/sign_message_lib.json
-@@ -20,8 +20,9 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0xd53cd0aB83D845Ac265BE939c57F53AD838012c9",
+             "codeHash": "0x525c754a46b79e05543a59bb61e8de3c9eee0d955a59352409cbe67ea1077528"
++        },
++        "zksync": {
++            "address": "0xAca1ec0a1A575CDCCF1DC3d5d296202Eb6061888",
++            "codeHash": "0x3e762bdca5f7d61c70e7ad1d1cb7b999481954543e7c29540e757d3e7004aa6b"
+         }
+     },
+     "networkAddresses": {
+@@ -20,8 +24,9 @@
          "40": "canonical",
          "41": "canonical",
          "56": "canonical",
-+        "11124": "0xAca1ec0a1A575CDCCF1DC3d5d296202Eb6061888",
-+        "2741": "0xAca1ec0a1A575CDCCF1DC3d5d296202Eb6061888",
++        "11124": "zksync",
++        "2741": "zksync",
          "71": "canonical",
 -        "81": "canonical",
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -922,7 +1040,7 @@ index 7e8a185..1c7fb58 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
@@ -931,15 +1049,26 @@ index 7e8a185..1c7fb58 100644
          "10243": "canonical",
          "11235": "canonical",
 diff --git a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/simulate_tx_accessor.json b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/simulate_tx_accessor.json
-index 45e8ac2..7e97f8f 100644
+index 45e8ac2..6c13272 100644
 --- a/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/simulate_tx_accessor.json
 +++ b/node_modules/@safe-global/safe-deployments/dist/assets/v1.4.1/simulate_tx_accessor.json
-@@ -18,10 +18,11 @@
+@@ -6,6 +6,10 @@
+         "canonical": {
+             "address": "0x3d4BA2E0884aa488718476ca2FB8Efc291A46199",
+             "codeHash": "0x91f82615581fc73b190b83d72e883608b25e392f72322035df1b13d51766cf8d"
++        },
++        "zksync": {
++            "address": "0xdd35026932273768A3e31F4efF7313B5B7A7199d",
++            "codeHash": "0xe772f957acb3987a0b2f1af9e0b515d2a213ec79cbe96a5187e5c5ba6709361e"
+         }
+     },
+     "networkAddresses": {
+@@ -18,10 +22,11 @@
          "25": "canonical",
          "31": "canonical",
          "40": "canonical",
-+        "11124": "0xdd35026932273768A3e31F4efF7313B5B7A7199d",
-+        "2741": "0xdd35026932273768A3e31F4efF7313B5B7A7199d",
++        "11124": "zksync",
++        "2741": "zksync",
          "41": "canonical",
          "56": "canonical",
          "71": "canonical",
@@ -947,7 +1076,7 @@ index 45e8ac2..7e97f8f 100644
          "97": "canonical",
          "100": "canonical",
          "114": "canonical",
-@@ -41,8 +42,6 @@
+@@ -41,8 +46,6 @@
          "592": "canonical",
          "690": "canonical",
          "919": "canonical",
@@ -956,7 +1085,7 @@ index 45e8ac2..7e97f8f 100644
          "1030": "canonical",
          "1101": "canonical",
          "1111": "canonical",
-@@ -87,7 +86,6 @@
+@@ -87,7 +90,6 @@
          "8194": "canonical",
          "8453": "canonical",
          "9001": "canonical",
