@@ -14,8 +14,8 @@ const CookiePolicy = () => {
       </p>
       <p>
         This Cookie Policy applies to our website at{' '}
-        <Link href="https://safe.abstract.io" target="_blank" rel="noreferrer">
-          https://safe.abstract.io
+        <Link href="https://staging.abs.safe.protofire.io/" target="_blank" rel="noreferrer">
+          https://staging.abs.safe.protofire.io/
         </Link>{' '}
         and sets out some further detail on how and why we use these technologies on our website.
       </p>
