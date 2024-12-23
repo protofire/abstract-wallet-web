@@ -3,7 +3,8 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import lightPalette from '@/components/theme/lightPalette'
 import darkPalette from '@/components/theme/darkPalette'
 
-const descriptionText = 'Abstract Safe Wallet is the most trusted smart account wallet on Ethereum with over $100B secured.'
+const descriptionText =
+  'Abstract Safe Wallet is the most trusted smart account wallet on Ethereum with over $100B secured.'
 const titleText = 'Abstract Safe Wallet'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (

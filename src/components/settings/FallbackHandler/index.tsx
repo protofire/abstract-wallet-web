@@ -43,7 +43,7 @@ export const FallbackHandler = (): ReactElement | null => {
 
   const warning = !hasFallbackHandler ? (
     <>
-      The {'Abstract Safe Wallet'} may not work correctly as no fallback handler is currently set.
+      The Abstract Safe Wallet may not work correctly as no fallback handler is currently set.
       {txBuilder && (
         <>
           {' '}
