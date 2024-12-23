@@ -346,7 +346,7 @@ const ReviewStep = ({ data, onSubmit, onBack, setStep }: StepRenderProps<NewSafe
       const error = asError(_err)
       const submitError = isWalletRejection(error)
         ? 'User rejected signing.'
-        : 'Error creating the Safe Account. Please try again later.'
+        : 'Error creating the Safe Account. Please try again later.' + error
       setSubmitError(submitError)
 
       if (isWalletRejection(error)) {
