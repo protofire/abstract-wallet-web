@@ -122,7 +122,7 @@ export const estimateBatchDeploymentTransaction = async (
   })
 
   // Substract ~20k gas for the simulation overhead
-  return BigInt(safeTxGas) - 20_000n
+  return BigInt(safeTxGas)
 }
 
 export default useDeployGasLimit
