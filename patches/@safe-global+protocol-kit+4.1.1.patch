@@ -1,0 +1,13 @@
+diff --git a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+index 00ae69d..16fc950 100644
+--- a/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
++++ b/node_modules/@safe-global/protocol-kit/dist/src/utils/eip-3770/config.js
+@@ -61,6 +61,8 @@ exports.networks = [
+     { chainId: 280n, shortName: 'zksync-goerli' },
+     { chainId: 282n, shortName: 'zkTCRO' },
+     { chainId: 288n, shortName: 'boba' },
++    { chainId: 2741, shortName: 'abstract' },
++    { chainId: 11124, shortName: 'abstract-sepolia' },
+     { chainId: 291n, shortName: 'orderly' },
+     { chainId: 300n, shortName: 'ogn' },
+     { chainId: 314n, shortName: 'filecoin' },
