@@ -231,7 +231,7 @@ const ReviewStep = ({ data, onSubmit, onBack, setStep }: StepRenderProps<NewSafe
 
       let safeAddress: string
 
-      if (chain.chainId === chains['zksync']) {
+      if ([chains['zksync'], chains['abstract-sepolia'], chains.abstract].includes(chain.chainId)) {
         safeAddress = await computeNewSafeAddress(
           customRpcUrl || getRpcServiceUrl(chain.rpcUri),
           {
