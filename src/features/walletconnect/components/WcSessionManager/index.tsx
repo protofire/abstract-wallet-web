@@ -23,7 +23,7 @@ type WcAutoApproveProps = Record<string, Record<string, boolean>>
 
 const WC_AUTO_APPROVE_KEY = 'wcAutoApprove'
 
-const WcSessionManager = ({ sessions, uri }: WcSessionManagerProps) => {
+const WcSessionManager = ({ /*sessions,*/ uri }: WcSessionManagerProps) => {
   const [autoApprove = {}, setAutoApprove] = useLocalStorage<WcAutoApproveProps>(WC_AUTO_APPROVE_KEY)
   const { walletConnect, error, setError, open, setOpen, setIsLoading } = useContext(WalletConnectContext)
   const { safe, safeAddress } = useSafeInfo()
@@ -124,7 +124,7 @@ const WcSessionManager = ({ sessions, uri }: WcSessionManagerProps) => {
   }
 
   // Connection form (initial state)
-  return <WcConnectionForm sessions={sessions} uri={uri} />
+  return <WcConnectionForm /*sessions={sessions}*/ uri={uri} />
 }
 
 export default WcSessionManager
