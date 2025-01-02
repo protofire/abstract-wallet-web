@@ -1,11 +1,11 @@
 import { useCallback, useEffect } from 'react'
 import { Grid, Typography, Divider, SvgIcon, IconButton, Tooltip, Box } from '@mui/material'
 import type { ReactElement } from 'react'
-import type { SessionTypes } from '@walletconnect/types'
+//import type { SessionTypes } from '@walletconnect/types'
 import useLocalStorage from '@/services/local-storage/useLocalStorage'
 import InfoIcon from '@/public/images/notifications/info.svg'
 import WcHints from '../WcHints'
-import WcSessionList from '../WcSessionList'
+//import WcSessionList from '../WcSessionList'
 import WcInput from '../WcInput'
 import WcLogoHeader from '../WcLogoHeader'
 import css from './styles.module.css'
@@ -15,7 +15,11 @@ import { WALLETCONNECT_EVENTS } from '@/services/analytics/events/walletconnect'
 
 const WC_HINTS_KEY = 'wcHints'
 
-export const WcConnectionForm = ({ sessions, uri }: { sessions: SessionTypes.Struct[]; uri: string }): ReactElement => {
+export const WcConnectionForm = ({
+  /*sessions, */ uri,
+}: {
+  /*sessions: SessionTypes.Struct[];*/ uri: string
+}): ReactElement => {
   const [showHints = true, setShowHints] = useLocalStorage<boolean>(WC_HINTS_KEY)
   const { safeLoaded } = useSafeInfo()
 
@@ -63,9 +67,9 @@ export const WcConnectionForm = ({ sessions, uri }: { sessions: SessionTypes.Str
 
       <Divider flexItem />
 
-      <Grid item>
+      {/* <Grid item>
         <WcSessionList sessions={sessions} />
-      </Grid>
+      </Grid> */}
 
       {showHints && (
         <>
