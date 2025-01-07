@@ -46,7 +46,18 @@ const QrModal = ({ onClose }: { onClose: () => void }): ReactElement => {
             }
           />
 
-          <Box mt={2}>
+          <Box
+            mt={2}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            textAlign="center"
+            maxWidth="100%"
+            sx={{
+              wordBreak: 'break-word',
+              overflow: 'hidden',
+            }}
+          >
             <EthHashInfo
               address={safeAddress}
               shortAddress={false}
