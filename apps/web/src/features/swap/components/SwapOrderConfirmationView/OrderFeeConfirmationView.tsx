@@ -1,7 +1,7 @@
 import type { SwapOrderConfirmationView, TwapOrderConfirmationView } from '@safe-global/safe-gateway-typescript-sdk'
 import { getOrderFeeBps } from '@/features/swap/helpers/utils'
 import { DataRow } from '@/components/common/Table/DataRow'
-import { BRAND_NAME, HelpCenterArticle } from '@/config/constants'
+import { HelpCenterArticle } from '@/config/constants'
 import { HelpIconTooltip } from '@/features/swap/components/HelpIconTooltip'
 import MUILink from '@mui/material/Link'
 

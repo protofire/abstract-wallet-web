@@ -5,7 +5,6 @@ import type { Dispatch, SetStateAction } from 'react'
 
 import FileUpload, { FileTypes } from '@/components/common/FileUpload'
 import InfoIcon from '@/public/images/notifications/info.svg'
-import { BRAND_NAME } from '@/config/constants'
 
 const AcceptedMimeTypes = {
   'application/json': ['.json'],

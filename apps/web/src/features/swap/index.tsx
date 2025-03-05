@@ -40,7 +40,6 @@ import { FEATURES } from '@/utils/chains'
 import { useGetIsSanctionedQuery } from '@/store/api/ofac'
 import { skipToken } from '@reduxjs/toolkit/query/react'
 import { getKeyWithTrueValue } from '@/utils/helpers'
-import { BRAND_NAME } from '@/config/constants'
 
 const BASE_URL = typeof window !== 'undefined' && window.location.origin ? window.location.origin : ''
 

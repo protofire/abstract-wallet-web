@@ -5,7 +5,6 @@ import { useContext, useEffect } from 'react'
 import { TxModalContext } from '@/components/tx-flow'
 import { AddOwnerFlow } from '@/components/tx-flow/flows'
 import { AppRoutes } from '@/config/routes'
-import { BRAND_NAME } from '@/config/constants'
 
 const AddOwner: NextPage = () => {
   const router = useRouter()

@@ -7,7 +7,6 @@ import { formatDurationFromMilliseconds, formatVisualAmount, maybePlural } from 
 import { formatCurrency } from '@/utils/formatNumber'
 import StakingStatus from '@/features/stake/components/StakingStatus'
 import { InfoTooltip } from '@/features/stake/components/InfoTooltip'
-import { BRAND_NAME } from '@/config/constants'
 
 type StakingOrderConfirmationViewProps = {
   order: NativeStakingDepositConfirmationView | StakingTxDepositInfo

@@ -1,7 +1,6 @@
 import Typography from '@mui/material/Typography'
 import PagePlaceholder from '@/components/common/PagePlaceholder'
 import AddCustomAppIcon from '@/public/images/apps/add-custom-app.svg'
-import { BRAND_NAME } from '@/config/constants'
 
 const SafeAppsZeroResultsPlaceholder = ({ searchQuery }: { searchQuery: string }) => {
   return (

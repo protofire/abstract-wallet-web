@@ -3,7 +3,7 @@ import { SETTINGS_EVENTS, trackEvent } from '@/services/analytics'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { selectOnChainSigning, setOnChainSigning } from '@/store/settingsSlice'
 import { FormControlLabel, Checkbox, Paper, Typography, FormGroup, Grid } from '@mui/material'
-import { BRAND_NAME, HelpCenterArticle } from '@/config/constants'
+import { HelpCenterArticle } from '@/config/constants'
 
 export const SafeAppsSigningMethod = () => {
   const onChainSigning = useAppSelector(selectOnChainSigning)

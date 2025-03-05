@@ -3,7 +3,6 @@ import type { ReactElement } from 'react'
 import WalletConnect from '@/public/images/common/walletconnect.svg'
 import Alert from '@/public/images/notifications/alert.svg'
 import css from './styles.module.css'
-import { BRAND_NAME } from '@/config/constants'
 
 const WcLogoHeader = ({ errorMessage }: { errorMessage?: string }): ReactElement => {
   return (

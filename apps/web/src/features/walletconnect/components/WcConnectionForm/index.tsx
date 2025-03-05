@@ -12,7 +12,6 @@ import css from './styles.module.css'
 import useSafeInfo from '@/hooks/useSafeInfo'
 import Track from '@/components/common/Track'
 import { WALLETCONNECT_EVENTS } from '@/services/analytics/events/walletconnect'
-import { BRAND_NAME } from '@/config/constants'
 
 const WC_HINTS_KEY = 'wcHints'
 

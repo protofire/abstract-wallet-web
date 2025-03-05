@@ -12,7 +12,6 @@ import { setBaseUrl as setNewGatewayBaseUrl } from '@safe-global/safe-client-gat
 import { CacheProvider, type EmotionCache } from '@emotion/react'
 import SafeThemeProvider from '@/components/theme/SafeThemeProvider'
 import '@/styles/globals.css'
-import { BRAND_NAME } from '@/config/constants'
 import { makeStore, useHydrateStore } from '@/store'
 import PageLayout from '@/components/common/PageLayout'
 import useLoadableStores from '@/hooks/useLoadableStores'

@@ -5,7 +5,6 @@ import useChains from '@/hooks/useChains'
 import useSafeInfo from '@/hooks/useSafeInfo'
 import { capitalize } from '@/utils/formatters'
 import { getPeerName, isBlockedBridge, isWarnedBridge } from '@/features/walletconnect/services/utils'
-import { BRAND_NAME } from '@/config/constants'
 
 const NAME_FALLBACK = 'this dApp'
 const NAME_PLACEHOLDER = '%%name%%'

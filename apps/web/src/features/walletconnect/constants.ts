@@ -1,5 +1,3 @@
-import { BRAND_NAME } from '@/config/constants'
-
 export const SAFE_COMPATIBLE_METHODS = [
   'eth_accounts',
   'net_version',
