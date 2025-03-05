@@ -4,7 +4,7 @@ import type { CheckboxProps } from '@mui/material'
 import { Grid, Button, Checkbox, FormControlLabel, Typography, Paper, SvgIcon, Box } from '@mui/material'
 import WarningIcon from '@/public/images/notifications/warning.svg'
 import { useForm } from 'react-hook-form'
-import { metadata } from '@/markdown/terms/terms.md'
+import metadata from '@/markdown/terms/terms.md'
 import { useAppDispatch, useAppSelector } from '@/store'
 import {
   selectCookies,
@@ -61,7 +61,7 @@ export const CookieAndTermBanner = ({
     dispatch(
       saveCookieAndTermConsent({
         ...values,
-        termsVersion: metadata.version,
+        termsVersion: metadata.prototype.version,
       }),
     )
     dispatch(closeCookieBanner())

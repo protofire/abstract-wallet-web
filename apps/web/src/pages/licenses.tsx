@@ -712,11 +712,7 @@ const Licenses: NextPage = () => {
   return (
     <>
       <Head>
-<<<<<<< HEAD:src/pages/licenses.tsx
-        <title>Abstract Safe Wallet – Licenses</title>
-=======
         <title>{`${BRAND_NAME} – Licenses`}</title>
->>>>>>> v1.49.3:apps/web/src/pages/licenses.tsx
       </Head>
 
       <main>{isOfficialHost && <SafeLicenses />}</main>
