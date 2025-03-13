@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import MUILink from '@mui/material/Link'
 import { AppRoutes } from '@/config/routes'
-import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 import { BRAND_NAME } from '@/config/constants'
 
 const SafeCookiePolicy = () => (
@@ -591,15 +590,15 @@ const SafeCookiePolicy = () => (
 )
 
 const CookiePolicy: NextPage = () => {
-  const isOfficialHost = useIsOfficialHost()
-
   return (
     <>
       <Head>
         <title>{`${BRAND_NAME} – Cookie policy`}</title>
       </Head>
 
-      <main>{isOfficialHost && <SafeCookiePolicy />}</main>
+      <main>
+        <SafeCookiePolicy />
+      </main>
     </>
   )
 }
