@@ -7,18 +7,19 @@ import {
   SidebarListItemIcon,
   SidebarListItemText,
 } from '@/components/sidebar/SidebarList'
-import { /*BEAMER_SELECTOR,*/ loadBeamer } from '@/services/beamer'
+import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
 import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 // import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
 import { ListItem, SvgIcon, Typography } from '@mui/material'
 import DebugToggle from '../DebugToggle'
-import { HELP_CENTER_URL, IS_PRODUCTION } from '@/config/constants'
+import { HELP_CENTER_URL, IS_PRODUCTION, NEW_SUGGESTION_FORM } from '@/config/constants'
 import Track from '@/components/common/Track'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import { useCurrentChain } from '@/hooks/useChains'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
+import SuggestionIcon from '@/public/images/lightbulb_icon.svg'
 import ExternalLink from '@/components/common/ExternalLink'
 
 const SidebarFooter = (): ReactElement => {
@@ -70,6 +71,18 @@ const SidebarFooter = (): ReactElement => {
               <SidebarListItemText data-testid="list-item-need-help" bold>
                 Need help?
               </SidebarListItemText>
+            </SidebarListItemButton>
+          </a>
+        </ListItem>
+      </Track>
+      <Track {...OVERVIEW_EVENTS.SUGGESTIONS}>
+        <ListItem disablePadding>
+          <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
+            <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#5FDDFF', color: 'black' }}>
+              <SidebarListItemIcon color="primary">
+                <SuggestionIcon />
+              </SidebarListItemIcon>
+              <SidebarListItemText bold>New Features Suggestion?</SidebarListItemText>
             </SidebarListItemButton>
           </a>
         </ListItem>
