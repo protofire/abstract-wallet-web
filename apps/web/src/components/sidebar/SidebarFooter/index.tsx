@@ -78,7 +78,7 @@ const SidebarFooter = (): ReactElement => {
       <Track {...OVERVIEW_EVENTS.SUGGESTIONS}>
         <ListItem disablePadding>
           <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
-            <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#5FDDFF', color: 'black' }}>
+            <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#12FF80', color: 'black' }}>
               <SidebarListItemIcon color="primary">
                 <SuggestionIcon />
               </SidebarListItemIcon>
