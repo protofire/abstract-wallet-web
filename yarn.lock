@@ -7426,7 +7426,7 @@ __metadata:
 
 "@safe-global/protocol-kit@patch:@safe-global/protocol-kit@npm%3A4.1.5#~/.yarn/patches/@safe-global-protocol-kit-npm-4.1.5-15df80b7bc.patch":
   version: 4.1.5
-  resolution: "@safe-global/protocol-kit@patch:@safe-global/protocol-kit@npm%3A4.1.5#~/.yarn/patches/@safe-global-protocol-kit-npm-4.1.5-15df80b7bc.patch::version=4.1.5&hash=d76d15"
+  resolution: "@safe-global/protocol-kit@patch:@safe-global/protocol-kit@npm%3A4.1.5#~/.yarn/patches/@safe-global-protocol-kit-npm-4.1.5-15df80b7bc.patch::version=4.1.5&hash=d62544"
   dependencies:
     "@noble/hashes": "npm:^1.3.3"
     "@safe-global/safe-core-sdk-types": "npm:^5.1.0"
@@ -7436,7 +7436,7 @@ __metadata:
     ethereumjs-util: "npm:^7.1.5"
     ethers: "npm:^6.13.1"
     semver: "npm:^7.6.2"
-  checksum: 10/d8de347f83752739323fa6517fd58d8bf1560c4be5a7522e30fa04e6576ddbe6c53a8c0046ace741a033a143672ab66761dea3696144c0020d18b7f61dc2eeea
+  checksum: 10/d7d8dcc96408ea9db08bf1b1b459a775e3b13cd0dd1920ffbdd2791e7b66ce1fe4cf903dc3c02d78751e6e0f025d006cf3163a9b537e5a3ce683ef100ae038f1
   languageName: node
   linkType: hard
 
