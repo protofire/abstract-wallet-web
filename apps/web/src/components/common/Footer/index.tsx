@@ -6,7 +6,7 @@ import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
-import { HELP_CENTER_URL } from '@/config/constants'
+import { HELP_PROTOFIRE_URL } from '@/config/constants'
 import packageJson from '../../../../package.json'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import GitHubIcon from '@mui/icons-material/GitHub'
@@ -68,7 +68,7 @@ const Footer = (): ReactElement | null => {
               <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
             </li> */}
           <li>
-            <ExternalLink href={HELP_CENTER_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
+            <ExternalLink href={HELP_PROTOFIRE_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
               Help
             </ExternalLink>
           </li>
