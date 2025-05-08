@@ -62,6 +62,8 @@ export const initSafeSDK = async ({
   let isL1SafeSingleton = chainId === chains.eth
 
   // If it is an official deployment we should still initiate the safeSDK
+
+  console.log({safeVersion, implementationVersionState})
   if (!isValidMasterCopy(implementationVersionState)) {
     const masterCopy = implementation
 
@@ -92,6 +94,8 @@ export const initSafeSDK = async ({
     // We cannot initialize a Core SDK for replayed Safes yet.
     return
   }
+
+  console.log({undeployedSafe, implementation})
   return Safe.init({
     provider: provider._getConnection().url,
     safeAddress: address,

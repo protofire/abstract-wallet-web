@@ -1,117 +1,273 @@
 diff --git a/dist/assets/v1.3.0/compatibility_fallback_handler.json b/dist/assets/v1.3.0/compatibility_fallback_handler.json
-index 41bec5974bd409c7836da62923a1b3c0c1feb7c8..6d73bdb6126e1caa266645a4ac28318f8a07af9d 100644
+index 41bec5974bd409c7836da62923a1b3c0c1feb7c8..12c631120959a680296e84e8e0b4fad26f665903 100644
 --- a/dist/assets/v1.3.0/compatibility_fallback_handler.json
 +++ b/dist/assets/v1.3.0/compatibility_fallback_handler.json
-@@ -26,6 +26,8 @@
-         "12": "canonical",
-         "14": "canonical",
-         "16": "eip155",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "18": "eip155",
-         "19": "eip155",
-         "25": ["eip155", "canonical"],
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/create_call.json b/dist/assets/v1.3.0/create_call.json
-index e8b99c76bdc2e6e5f805df1e3804515686043e85..44572eeff3419a55f72a1ea4dc70387839cdea19 100644
+index e8b99c76bdc2e6e5f805df1e3804515686043e85..86b5bc5c250143cac816727943d606c7a2625308 100644
 --- a/dist/assets/v1.3.0/create_call.json
 +++ b/dist/assets/v1.3.0/create_call.json
-@@ -33,6 +33,8 @@
-         "30": "canonical",
-         "31": "canonical",
-         "39": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "40": "canonical",
-         "41": "canonical",
-         "42": "canonical",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/gnosis_safe.json b/dist/assets/v1.3.0/gnosis_safe.json
-index a339faf6d0ae5cfa18c9766a7382850066fbae9d..8f09efa477ad2d0c34312d53d88c456475680d5f 100644
+index a339faf6d0ae5cfa18c9766a7382850066fbae9d..0d3c817c212d068a101a1a574c4b304eb45fb7c8 100644
 --- a/dist/assets/v1.3.0/gnosis_safe.json
 +++ b/dist/assets/v1.3.0/gnosis_safe.json
-@@ -31,6 +31,8 @@
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
-         "30": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "31": "canonical",
-         "39": "canonical",
-         "40": "canonical",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/gnosis_safe_l2.json b/dist/assets/v1.3.0/gnosis_safe_l2.json
-index ef975187519c15091f1408232e0253dfe1aaee8e..8bc5889bb7c696c10059825c2ce60fa4d2b33e9a 100644
+index ef975187519c15091f1408232e0253dfe1aaee8e..077b22fc022ec7a44da6d6e5ffef2955dc4441e8 100644
 --- a/dist/assets/v1.3.0/gnosis_safe_l2.json
 +++ b/dist/assets/v1.3.0/gnosis_safe_l2.json
-@@ -31,6 +31,8 @@
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
-         "30": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "31": "canonical",
-         "39": "canonical",
-         "40": "canonical",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/multi_send.json b/dist/assets/v1.3.0/multi_send.json
-index 017ae9a9572309a1b2d4f14c01f1851dc9d2db62..f5721fa611651b0fb0d7b2b6423b206c9b2d77d3 100644
+index 017ae9a9572309a1b2d4f14c01f1851dc9d2db62..ff82867cb53a79668024e5befc6230ca6fec4dae 100644
 --- a/dist/assets/v1.3.0/multi_send.json
 +++ b/dist/assets/v1.3.0/multi_send.json
-@@ -27,6 +27,8 @@
-         "14": "canonical",
-         "16": "eip155",
-         "18": "eip155",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "19": "eip155",
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/multi_send_call_only.json b/dist/assets/v1.3.0/multi_send_call_only.json
-index d767f6b3d6139d5e301a535575accca94193d105..e5037df3dbe05ee3e4a46fdf416e82855c43400a 100644
+index d767f6b3d6139d5e301a535575accca94193d105..34f4ca23173369c76cb3aa88b1fd06a40fdd36bd 100644
 --- a/dist/assets/v1.3.0/multi_send_call_only.json
 +++ b/dist/assets/v1.3.0/multi_send_call_only.json
-@@ -27,6 +27,8 @@
-         "14": "canonical",
-         "16": "eip155",
-         "18": "eip155",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "19": "eip155",
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/proxy_factory.json b/dist/assets/v1.3.0/proxy_factory.json
-index 9280f4df3b13280531ed79a83e4bf101b619262c..36edf24a203d39925a009bba11b0fcac725a316c 100644
+index 9280f4df3b13280531ed79a83e4bf101b619262c..51ffdd7b38da06b25d54044ff36d2cdc69fbba7d 100644
 --- a/dist/assets/v1.3.0/proxy_factory.json
 +++ b/dist/assets/v1.3.0/proxy_factory.json
-@@ -31,6 +31,8 @@
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
-         "30": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "31": "canonical",
-         "39": "canonical",
-         "40": "canonical",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/sign_message_lib.json b/dist/assets/v1.3.0/sign_message_lib.json
-index 9865e7d6de11a289da28636a24c115329819f0d8..21cecb926a4aff1f8f02916523dcff9a38345754 100644
+index 9865e7d6de11a289da28636a24c115329819f0d8..01d5c20bd59c2bc75231011eac63a7df46bd76fa 100644
 --- a/dist/assets/v1.3.0/sign_message_lib.json
 +++ b/dist/assets/v1.3.0/sign_message_lib.json
-@@ -34,6 +34,8 @@
-         "31": "canonical",
-         "39": "canonical",
-         "40": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "41": "canonical",
-         "42": "canonical",
-         "43": ["eip155", "canonical"],
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
 diff --git a/dist/assets/v1.3.0/simulate_tx_accessor.json b/dist/assets/v1.3.0/simulate_tx_accessor.json
-index 0df16564b8713e796af65db460833635e937a9ef..c5c1bdf4cf7e5bd9175a1f17da8a0491ebc9fb7f 100644
+index 0df16564b8713e796af65db460833635e937a9ef..9dc3d451066ef5d96118a9def1646d20c1105174 100644
 --- a/dist/assets/v1.3.0/simulate_tx_accessor.json
 +++ b/dist/assets/v1.3.0/simulate_tx_accessor.json
-@@ -31,6 +31,8 @@
-         "25": ["eip155", "canonical"],
-         "28": "eip155",
-         "30": "canonical",
+@@ -17,6 +17,8 @@
+         }
+     },
+     "networkAddresses": {
 +        "2741": "zksync",
-+        "11124": "zksync",
-         "31": "canonical",
-         "39": "canonical",
-         "40": "canonical",
++        "11124": ["zksync", "canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.4.1/compatibility_fallback_handler.json b/dist/assets/v1.4.1/compatibility_fallback_handler.json
+index ba25416e31f5b5f83be357f18caad16e2475e590..f79f9c4b18304d4ac2212a22bd4ccf1aeef60d99 100644
+--- a/dist/assets/v1.4.1/compatibility_fallback_handler.json
++++ b/dist/assets/v1.4.1/compatibility_fallback_handler.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/create_call.json b/dist/assets/v1.4.1/create_call.json
+index 5678cd559d4cac9682e1e2eddc943d6aca88f727..4cabcd446b66f258e68ec3d3d71f2d08d327f009 100644
+--- a/dist/assets/v1.4.1/create_call.json
++++ b/dist/assets/v1.4.1/create_call.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/multi_send.json b/dist/assets/v1.4.1/multi_send.json
+index 131ce32ff3c34e01ebdb2088fa248daf0018b515..9f8badfc25ed55d271b518abbd736c7d7b0c5efe 100644
+--- a/dist/assets/v1.4.1/multi_send.json
++++ b/dist/assets/v1.4.1/multi_send.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/multi_send_call_only.json b/dist/assets/v1.4.1/multi_send_call_only.json
+index 55b358153ed9b7d3171829122dd10d0ce7ae667c..e9d6925eb3d93f10c6730c24ed9ce135c99a5fdf 100644
+--- a/dist/assets/v1.4.1/multi_send_call_only.json
++++ b/dist/assets/v1.4.1/multi_send_call_only.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/safe.json b/dist/assets/v1.4.1/safe.json
+index 461716616d653c6ef7d67b0f30178dc2711d3d79..2d9b42f223dd053b024739ba70b9c727720f57fa 100644
+--- a/dist/assets/v1.4.1/safe.json
++++ b/dist/assets/v1.4.1/safe.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/safe_l2.json b/dist/assets/v1.4.1/safe_l2.json
+index 3a5e2305dbb93553bc958edc25b58d4772ff6988..e0fa497c86cca64bf303e8f629c6ab9699d0620f 100644
+--- a/dist/assets/v1.4.1/safe_l2.json
++++ b/dist/assets/v1.4.1/safe_l2.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/safe_migration.json b/dist/assets/v1.4.1/safe_migration.json
+index afc803db9daca76bd10f6367b866591a2eb47b6b..20254098e44c124c83d994bff4c563366316b192 100644
+--- a/dist/assets/v1.4.1/safe_migration.json
++++ b/dist/assets/v1.4.1/safe_migration.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "10": "canonical",
+         "56": "canonical",
+diff --git a/dist/assets/v1.4.1/safe_proxy_factory.json b/dist/assets/v1.4.1/safe_proxy_factory.json
+index 01c5f3647e95decf7f635d02005e5f2de12fa981..90ceef7803a4b335bf28f60182959caacf452fc7 100644
+--- a/dist/assets/v1.4.1/safe_proxy_factory.json
++++ b/dist/assets/v1.4.1/safe_proxy_factory.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/safe_to_l2_migration.json b/dist/assets/v1.4.1/safe_to_l2_migration.json
+index 16e005a56912c8f8902cada08eb9424a29308b9d..a1cf183032d3fe7711a9ad0c9c3b2a5ee4499346 100644
+--- a/dist/assets/v1.4.1/safe_to_l2_migration.json
++++ b/dist/assets/v1.4.1/safe_to_l2_migration.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "10": "canonical",
+         "56": "canonical",
+diff --git a/dist/assets/v1.4.1/safe_to_l2_setup.json b/dist/assets/v1.4.1/safe_to_l2_setup.json
+index 822cf1f56eb0c14c9d86bfb83ae05cdf1431a9ab..e758a2cc511e6d20acd5737d2d212e1dd8f7ca3b 100644
+--- a/dist/assets/v1.4.1/safe_to_l2_setup.json
++++ b/dist/assets/v1.4.1/safe_to_l2_setup.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "10": "canonical",
+         "56": "canonical",
+diff --git a/dist/assets/v1.4.1/sign_message_lib.json b/dist/assets/v1.4.1/sign_message_lib.json
+index 04967be57ec7b535d15ca17a992d6a14c54a404f..f6949f1528e5c618a2b789b21edec69a616e729c 100644
+--- a/dist/assets/v1.4.1/sign_message_lib.json
++++ b/dist/assets/v1.4.1/sign_message_lib.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",
+diff --git a/dist/assets/v1.4.1/simulate_tx_accessor.json b/dist/assets/v1.4.1/simulate_tx_accessor.json
+index b2d8d2d1eb648b98fe72cc853acd8b9e7ddb6638..f49aa36c904179f278ac5e0a53770995ef333d98 100644
+--- a/dist/assets/v1.4.1/simulate_tx_accessor.json
++++ b/dist/assets/v1.4.1/simulate_tx_accessor.json
+@@ -9,6 +9,8 @@
+         }
+     },
+     "networkAddresses": {
++        "2741": "zksync",
++        "11124": ["zksync", "canonical"],
+         "1": "canonical",
+         "5": "canonical",
+         "10": "canonical",

@@ -28,6 +28,16 @@ export const useInitSafeCoreSDK = () => {
       return
     }
 
+    console.log({
+      provider: web3ReadOnly,
+      chainId: safe.chainId,
+      address: safe.address.value,
+      version: safe.version,
+      implementationVersionState: safe.implementationVersionState,
+      implementation: safe.implementation.value,
+      undeployedSafe,
+    })
+
     // A read-only instance of the SDK is sufficient because we connect the signer to it when needed
     initSafeSDK({
       provider: web3ReadOnly,

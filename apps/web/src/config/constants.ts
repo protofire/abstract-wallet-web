@@ -6,7 +6,7 @@ export const IS_DEV = process.env.NODE_ENV === 'development'
 export const GATEWAY_URL_PRODUCTION =
   process.env.NEXT_PUBLIC_GATEWAY_URL_PRODUCTION || 'https://gateway.abstract-safe.protofire.io'
 export const GATEWAY_URL_STAGING =
-  process.env.NEXT_PUBLIC_GATEWAY_URL_STAGING || 'https://gateway.abstract-safe.protofire.io'
+  process.env.NEXT_PUBLIC_GATEWAY_URL_STAGING || 'https://gateway.staging.abstract-safe.protofire.io'
 
 // Magic numbers
 export const POLLING_INTERVAL = 15_000
@@ -105,7 +105,7 @@ export const TWITTER_URL = 'https://twitter.com/safe'
 // Legal
 export const IS_OFFICIAL_HOST = process.env.NEXT_PUBLIC_IS_OFFICIAL_HOST === 'true'
 export const OFFICIAL_HOSTS = /app\.safe\.global|.+\.5afe\.dev|localhost:3000/
-export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Safe{Wallet}' : 'Wallet fork')
+export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Safe{Wallet}' : 'Abstract Safe')
 export const BRAND_LOGO = process.env.NEXT_PUBLIC_BRAND_LOGO || ''
 
 // Risk mitigation (Blockaid)
