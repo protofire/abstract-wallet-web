@@ -92,6 +92,7 @@ export const initSafeSDK = async ({
     // We cannot initialize a Core SDK for replayed Safes yet.
     return
   }
+
   return Safe.init({
     provider: provider._getConnection().url,
     safeAddress: address,
