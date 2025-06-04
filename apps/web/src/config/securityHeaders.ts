@@ -1,4 +1,4 @@
-import { CYPRESS_MNEMONIC, IS_PRODUCTION } from '@/config/constants'
+import { IS_PRODUCTION } from '@/config/constants'
 
 /**
  * CSP Header notes:
