@@ -1,4 +1,5 @@
-import { SentryErrorBoundary } from '@/services/sentry' // needs to be imported first
+import Analytics from '@/services/analytics/Analytics'
+import { SentryErrorBoundary } from '@/services/sentry'
 import type { ReactNode } from 'react'
 import { type ReactElement } from 'react'
 import { type AppProps } from 'next/app'
@@ -46,6 +47,8 @@ import GeoblockingProvider from '@/components/common/GeoblockingProvider'
 import { useVisitedSafes } from '@/features/myAccounts/hooks/useVisitedSafes'
 import OutreachPopup from '@/features/targetedOutreach/components/OutreachPopup'
 import { GATEWAY_URL } from '@/config/gateway'
+import { useDatadog } from '@/services/datadog'
+import useMixpanel from '@/services/analytics/useMixpanel'
 
 const reduxStore = makeStore()
 
@@ -54,7 +57,9 @@ const InitApp = (): null => {
   setNewGatewayBaseUrl(GATEWAY_URL)
   useHydrateStore(reduxStore)
   useAdjustUrl()
+  useDatadog()
   useGtm()
+  useMixpanel()
   useNotificationTracking()
   useInitSession()
   useLoadableStores()
@@ -98,16 +103,16 @@ export const AppProviders = ({ children }: { children: ReactNode | ReactNode[] }
   )
 }
 
-interface WebCoreAppProps extends AppProps {
+interface SafeWalletAppProps extends AppProps {
   emotionCache?: EmotionCache
 }
 
-const WebCoreApp = ({
+const SafeWalletApp = ({
   Component,
   pageProps,
   router,
   emotionCache = clientSideEmotionCache,
-}: WebCoreAppProps): ReactElement => {
+}: SafeWalletAppProps): ReactElement => {
   const safeKey = useChangedValue(router.query.safe?.toString())
 
   return (
@@ -137,6 +142,8 @@ const WebCoreApp = ({
 
           <CounterfactualHooks />
 
+          <Analytics />
+
           <PkModulePopup />
         </AppProviders>
       </CacheProvider>
@@ -144,4 +151,4 @@ const WebCoreApp = ({
   )
 }
 
-export default WebCoreApp
+export default SafeWalletApp

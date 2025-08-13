@@ -1,26 +1,19 @@
-import type { ReactElement } from 'react'
-import { useEffect } from 'react'
-
-import {
-  SidebarList,
-  SidebarListItemButton,
-  SidebarListItemIcon,
-  SidebarListItemText,
-} from '@/components/sidebar/SidebarList'
+import { type ReactElement, useEffect } from 'react'
 import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
 import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 // import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
-import { ListItem, SvgIcon, Typography } from '@mui/material'
-import DebugToggle from '../DebugToggle'
-import { HELP_PROTOFIRE_URL, IS_PRODUCTION, NEW_SUGGESTION_FORM } from '@/config/constants'
-import Track from '@/components/common/Track'
-import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
-import { useCurrentChain } from '@/hooks/useChains'
+import { HELP_PROTOFIRE_URL, NEW_SUGGESTION_FORM } from '@/config/constants'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import SuggestionIcon from '@/public/images/lightbulb_icon.svg'
 import ExternalLink from '@/components/common/ExternalLink'
+import { Divider, ListItem, SvgIcon, Typography } from '@mui/material'
+import DebugToggle from '../DebugToggle'
+import { IS_PRODUCTION } from '@/config/constants'
+import Track from '@/components/common/Track'
+import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
+import { useCurrentChain } from '@/hooks/useChains'
 
 const SidebarFooter = (): ReactElement => {
   //const dispatch = useAppDispatch()
@@ -41,11 +34,15 @@ const SidebarFooter = (): ReactElement => {
   // }
 
   return (
-    <SidebarList>
+    <>
       {!IS_PRODUCTION && (
-        <ListItem disablePadding>
-          <DebugToggle />
-        </ListItem>
+        <>
+          <ListItem disablePadding>
+            <DebugToggle />
+          </ListItem>
+
+          <Divider flexItem />
+        </>
       )}
 
       {/* <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
@@ -107,7 +104,7 @@ const SidebarFooter = (): ReactElement => {
           </Typography>
         </SidebarListItemText>
       </ListItem>
-    </SidebarList>
+    </SidebarList >
   )
 }
 

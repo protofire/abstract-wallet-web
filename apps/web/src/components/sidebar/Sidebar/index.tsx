@@ -38,8 +38,6 @@ const Sidebar = (): ReactElement => {
         {/* Address, balance, copy button, etc */}
         <SidebarHeader />
 
-        <Divider />
-
         {/* Nav menu */}
         <SidebarNavigation />
 
@@ -51,7 +49,6 @@ const Sidebar = (): ReactElement => {
 
         <Divider flexItem />
 
-        {/* What's new + Need help? */}
         <SidebarFooter />
 
         {/* <Divider flexItem />
