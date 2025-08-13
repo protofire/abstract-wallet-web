@@ -1,5 +1,5 @@
 diff --git a/dist/src/contracts/utils.js b/dist/src/contracts/utils.js
-index d4c4940c14650f3bd1222fe1405fe2e8b83bb226..2f5fb866efcbb086a82308b47093ca284b06577b 100644
+index 3172ce68e4736b7ae6d4d778ef45e5a313e6466a..5a78b81da0437ddcb78c4da5d54ea000f1426995 100644
 --- a/dist/src/contracts/utils.js
 +++ b/dist/src/contracts/utils.js
 @@ -17,6 +17,8 @@ exports.PREDETERMINED_SALT_NONCE = '0xb1073742015cbcf5a3a4d9d1ae33ecf619439710b8
@@ -11,12 +11,12 @@ index d4c4940c14650f3bd1222fe1405fe2e8b83bb226..2f5fb866efcbb086a82308b47093ca28
  // For bundle size efficiency we store SafeProxy.sol/GnosisSafeProxy.sol zksync bytecode hash in hex.
  // To get the values below we need to:
  // 1. Compile Safe smart contracts for zksync
-@@ -169,7 +171,7 @@ async function predictSafeAddress({ safeProvider, chainId, safeAccountConfig, sa
-     const input = safeProvider.encodeParameters(['address'], [await safeContract.getAddress()]);
-     const from = await safeProxyFactoryContract.getAddress();
+@@ -202,7 +204,7 @@ async function predictSafeAddress({ safeProvider, chainId, safeAccountConfig, sa
+     const input = safeProvider.encodeParameters('address', [safeContract.getAddress()]);
+     const from = safeProxyFactoryContract.getAddress();
      // On the zkSync chains, the counterfactual deployment address is calculated differently
 -    const isZkSyncChain = [ZKSYNC_MAINNET, ZKSYNC_TESTNET, ZKSYNC_LENS].includes(chainId);
 +    const isZkSyncChain = [ZKSYNC_MAINNET, ZKSYNC_TESTNET, ZKSYNC_LENS, ABSTRACT, ABSTRACT_SEPOLIA].includes(chainId);
      if (isZkSyncChain) {
-         const proxyAddress = zkSyncCreate2Address(from, safeVersion, salt, input);
+         const proxyAddress = zkSyncCreate2Address(from, safeVersion, salt, (0, types_1.asHex)(input));
          return safeProvider.getChecksummedAddress(proxyAddress);
