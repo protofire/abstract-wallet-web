@@ -84,11 +84,11 @@ export function UpsertRecoveryFlowSettings({ delayModifier }: { delayModifier?: 
   // RHF's dirty check is tempermental with our address input dropdown
   const isDirty = delayModifier
     ? // Updating settings
-    !sameAddress(recoverer, delayModifier.recoverers[0]) ||
-    delayModifier.delay !== BigInt(delay) ||
-    delayModifier.expiry !== BigInt(expiry)
+      !sameAddress(recoverer, delayModifier.recoverers[0]) ||
+      delayModifier.delay !== BigInt(delay) ||
+      delayModifier.expiry !== BigInt(expiry)
     : // Setting up recovery
-    recoverer && delay && expiry
+      recoverer && delay && expiry
 
   const validateRecoverer = (recoverer: string) => {
     if (sameAddress(recoverer, safeAddress)) {

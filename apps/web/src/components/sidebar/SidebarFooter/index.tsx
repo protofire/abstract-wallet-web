@@ -14,6 +14,7 @@ import { IS_PRODUCTION } from '@/config/constants'
 import Track from '@/components/common/Track'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import { useCurrentChain } from '@/hooks/useChains'
+import { SidebarListItemButton, SidebarListItemIcon, SidebarListItemText } from '../SidebarList'
 
 const SidebarFooter = (): ReactElement => {
   //const dispatch = useAppDispatch()
@@ -104,7 +105,7 @@ const SidebarFooter = (): ReactElement => {
           </Typography>
         </SidebarListItemText>
       </ListItem>
-    </SidebarList >
+    </>
   )
 }
 
