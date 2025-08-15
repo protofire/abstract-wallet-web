@@ -196,6 +196,7 @@ export const checkSafeActivation = async (
   startBlock?: number,
 ) => {
   try {
+    await delay(1000) // Wait a second before checking the transaction
     const txResponse = await retryGetTransaction(provider, txHash)
 
     const replaceableTx = startBlock ? txResponse.replaceableTransaction(startBlock) : txResponse
