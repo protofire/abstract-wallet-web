@@ -1,5 +1,5 @@
 import { type ReactElement, useEffect } from 'react'
-import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
+import { loadBeamer } from '@/services/beamer'
 import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 // import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
@@ -8,11 +8,9 @@ import { HELP_PROTOFIRE_URL, NEW_SUGGESTION_FORM } from '@/config/constants'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import SuggestionIcon from '@/public/images/lightbulb_icon.svg'
 import ExternalLink from '@/components/common/ExternalLink'
-import { Divider, ListItem, SvgIcon, Typography } from '@mui/material'
+import { Box, Divider, ListItem, SvgIcon, Typography, useTheme } from '@mui/material'
 import DebugToggle from '../DebugToggle'
 import { IS_PRODUCTION } from '@/config/constants'
-import Track from '@/components/common/Track'
-import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import { useCurrentChain } from '@/hooks/useChains'
 import { SidebarListItemButton, SidebarListItemIcon, SidebarListItemText } from '../SidebarList'
 
@@ -20,6 +18,7 @@ const SidebarFooter = (): ReactElement => {
   //const dispatch = useAppDispatch()
   const chain = useCurrentChain()
   const hasBeamerConsent = useAppSelector((state) => hasConsentFor(state, CookieAndTermType.UPDATES))
+  const theme = useTheme()
 
   useEffect(() => {
     // Initialise Beamer when consent was previously given
@@ -59,32 +58,45 @@ const SidebarFooter = (): ReactElement => {
         </ListItem>
       </Track> */}
 
-      <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
-        <ListItem disablePadding>
-          <a target="_blank" rel="noopener noreferrer" href={HELP_PROTOFIRE_URL} style={{ width: '100%' }}>
-            <SidebarListItemButton>
-              <SidebarListItemIcon color="primary">
-                <HelpCenterIcon />
-              </SidebarListItemIcon>
-              <SidebarListItemText data-testid="list-item-need-help" bold>
-                Need help?
-              </SidebarListItemText>
-            </SidebarListItemButton>
-          </a>
-        </ListItem>
-      </Track>
-      <Track {...OVERVIEW_EVENTS.SUGGESTIONS}>
-        <ListItem disablePadding>
-          <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
-            <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#12FF80', color: 'black' }}>
-              <SidebarListItemIcon color="primary">
+      <ListItem style={{ padding: 'var(--space-1)' }}>
+        <a target="_blank" rel="noopener noreferrer" href={HELP_PROTOFIRE_URL} style={{ width: '100%' }}>
+          <SidebarListItemButton>
+            <SidebarListItemIcon color="primary">
+              <HelpCenterIcon />
+            </SidebarListItemIcon>
+            <SidebarListItemText data-testid="list-item-need-help" bold>
+              Need help?
+            </SidebarListItemText>
+          </SidebarListItemButton>
+        </a>
+      </ListItem>
+
+      <ListItem style={{ padding: '0 var(--space-1) 0' }}>
+        <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
+          <SidebarListItemButton
+            style={{
+              color: 'black',
+              backgroundColor:
+                theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.secondary.main,
+            }}
+          >
+            <SidebarListItemIcon>
+              <Box
+                sx={{
+                  '& svg': {
+                    '& path': () => ({
+                      fill: 'black !important',
+                    }),
+                  },
+                }}
+              >
                 <SuggestionIcon />
-              </SidebarListItemIcon>
-              <SidebarListItemText bold>New Features Suggestion?</SidebarListItemText>
-            </SidebarListItemButton>
-          </a>
-        </ListItem>
-      </Track>
+              </Box>
+            </SidebarListItemIcon>
+            <SidebarListItemText bold>New Features Suggestion?</SidebarListItemText>
+          </SidebarListItemButton>
+        </a>
+      </ListItem>
       <ListItem>
         <SidebarListItemText>
           <Typography variant="caption">

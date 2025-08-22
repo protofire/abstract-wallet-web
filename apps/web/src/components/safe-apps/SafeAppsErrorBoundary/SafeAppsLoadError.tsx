@@ -4,8 +4,6 @@ import SvgIcon from '@mui/material/SvgIcon'
 import NetworkError from '@/public/images/apps/network-error.svg'
 
 import css from './styles.module.css'
-import ExternalLink from '@/components/common/ExternalLink'
-import { DISCORD_URL } from '@safe-global/utils/config/constants'
 
 type SafeAppsLoadErrorProps = {
   onBackToApps: () => void
@@ -20,10 +18,7 @@ const SafeAppsLoadError = ({ onBackToApps }: SafeAppsLoadErrorProps): React.Reac
         <SvgIcon component={NetworkError} inheritViewBox className={css.image} />
 
         <div>
-          <Typography component="span">In case the problem persists, please reach out to us via </Typography>
-          <ExternalLink href={DISCORD_URL} fontSize="medium">
-            Discord
-          </ExternalLink>
+          <Typography component="span">In case the problem persists, please reach out to us.</Typography>
         </div>
 
         <Button href="#back" color="primary" onClick={onBackToApps}>

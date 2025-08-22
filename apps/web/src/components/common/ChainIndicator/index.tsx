@@ -66,6 +66,7 @@ const ChainIndicator = ({
       alt={`${chainConfig.chainName} Logo`}
       width={imageSize}
       height={imageSize}
+      style={{ borderRadius: '100%' }}
       loading="lazy"
     />
   ) : (
