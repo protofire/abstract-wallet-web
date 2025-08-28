@@ -1,24 +1,41 @@
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import SvgIcon from '@mui/material/SvgIcon'
-import NetworkError from '@/public/images/apps/network-error.svg'
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import SvgIcon from '@mui/material/SvgIcon';
+import NetworkError from '@/public/images/apps/network-error.svg';
+import { HELP_PROTOFIRE_URL } from '@/config/constants'
 
-import css from './styles.module.css'
+import css from './styles.module.css';
 
 type SafeAppsLoadErrorProps = {
-  onBackToApps: () => void
-}
+  onBackToApps: () => void;
+};
 
-const SafeAppsLoadError = ({ onBackToApps }: SafeAppsLoadErrorProps): React.ReactElement => {
+const SafeAppsLoadError = ({
+  onBackToApps,
+}: SafeAppsLoadErrorProps): React.ReactElement => {
   return (
     <div className={css.wrapper}>
       <div className={css.content}>
         <Typography variant="h1">Safe App could not be loaded</Typography>
 
-        <SvgIcon component={NetworkError} inheritViewBox className={css.image} />
+        <SvgIcon
+          component={NetworkError}
+          inheritViewBox
+          className={css.image}
+        />
 
         <div>
-          <Typography component="span">In case the problem persists, please reach out to us.</Typography>
+          <Typography component="span">
+            In case if problem persists, please report it through our{' '}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={HELP_PROTOFIRE_URL}
+            >
+              Form
+            </a>
+            .
+          </Typography>
         </div>
 
         <Button href="#back" color="primary" onClick={onBackToApps}>
@@ -26,7 +43,7 @@ const SafeAppsLoadError = ({ onBackToApps }: SafeAppsLoadErrorProps): React.Reac
         </Button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SafeAppsLoadError
+export default SafeAppsLoadError;
