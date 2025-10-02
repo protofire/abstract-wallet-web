@@ -370,7 +370,7 @@ index 03f66e282905d62d2d13c785b80c00e40d03d0cb..a7defa424cfa49ffeb68880eefeda002
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -392,7 +392,7 @@ index 3523d1bb0e927b56a8141825c00eba07aba0ee76..e75d0c5a4b265c7f949ac41b705387b6
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"],
++    "11124": ["eip155", "zksync", "canonical"],,
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -414,7 +414,7 @@ index 03ffee5b8391c10fcee27feda2f15814e70bd070..49d005a2c2b2ee4718d09fb228d1470f
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -436,7 +436,7 @@ index 5dc4cc4f701f1873f6aedf8c78e46d9b96ae55ed..09036dada771bf5c7fe5bad03ce486d6
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -458,7 +458,7 @@ index d161bf17dda5e26c26e195949f973db7d40edbfb..a26851e0c358d34ee1674db5a984d845
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -480,7 +480,7 @@ index bc352e99c405955723546e3cbf16be6a4d826c3b..076b70c8a758911e614759b73a59a746
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -502,7 +502,7 @@ index 45920cb9d03dcba991ef3276fa8fc57b445dd5aa..ade45f8ca0c33d5b08f34f315f01d580
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -524,7 +524,7 @@ index 537406d81f89d922bc26843dafa88b0368f22a71..bb0837f013cd4fbfa523255194516f01
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
@@ -546,7 +546,7 @@ index 8eb4e37fa7e3ccbfcbd1245cae7f1317df931390..de2bc6b3f67b72a2f9e2c05bfaadafee
      "11011": ["eip155", "canonical"],
      "11111": "canonical",
 -    "11124": "zksync",
-+    "11124": ["eip155", "zksync", "canonical"]
++    "11124": ["eip155", "zksync", "canonical"],
      "11235": "canonical",
      "11437": "canonical",
      "11820": "canonical",
