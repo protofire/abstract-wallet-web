@@ -16,7 +16,7 @@ index 3172ce68e4736b7ae6d4d778ef45e5a313e6466a..5a78b81da0437ddcb78c4da5d54ea000
      const from = safeProxyFactoryContract.getAddress();
      // On the zkSync chains, the counterfactual deployment address is calculated differently
 -    const isZkSyncChain = [ZKSYNC_MAINNET, ZKSYNC_TESTNET, ZKSYNC_LENS].includes(chainId);
-+    const isZkSyncChain = [ZKSYNC_MAINNET, ZKSYNC_LENS, ZKSYNC_TESTNET].includes(chainId);
++    const isZkSyncChain = [ZKSYNC_MAINNET, ZKSYNC_LENS, ZKSYNC_TESTNET, ABSTRACT, ABSTRACT_SEPOLIA].includes(chainId);
      if (isZkSyncChain) {
          const proxyAddress = zkSyncCreate2Address(from, safeVersion, salt, (0, types_1.asHex)(input));
          return safeProvider.getChecksummedAddress(proxyAddress);
