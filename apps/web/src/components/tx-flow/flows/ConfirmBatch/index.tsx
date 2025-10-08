@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { type TransactionDetails } from '@safe-global/safe-gateway-typescript-sdk'
-import { createMultiSendCallOnlyTx } from '@/services/tx/tx-sender'
+import { createMultiSendCallOnlyTxWithZkSyncWorkaround } from '@/services/tx/tx-sender'
 import { SafeTxContext } from '../../SafeTxProvider'
 import type { MetaTransactionData } from '@safe-global/types-kit'
 import { OperationType } from '@safe-global/types-kit'
@@ -10,6 +10,7 @@ import { maybePlural } from '@safe-global/utils/utils/formatters'
 import ReviewTransaction, { type ReviewTransactionProps } from '@/components/tx/ReviewTransactionV2'
 import { TxFlowType } from '@/services/analytics'
 import { TxFlow } from '../../TxFlow'
+import useSafeInfo from '@/hooks/useSafeInfo'
 
 type ConfirmBatchProps = {
   onSubmit: () => void
@@ -27,11 +28,14 @@ const getData = (txDetails: TransactionDetails): MetaTransactionData => {
 const ConfirmBatch = (props: ReviewTransactionProps) => {
   const { setSafeTx, setSafeTxError } = useContext(SafeTxContext)
   const batchTxs = useDraftBatch()
+  const { safe } = useSafeInfo()
 
   useEffect(() => {
     const calls = batchTxs.map((tx) => getData(tx.txDetails))
-    createMultiSendCallOnlyTx(calls).then(setSafeTx).catch(setSafeTxError)
-  }, [batchTxs, setSafeTx, setSafeTxError])
+    createMultiSendCallOnlyTxWithZkSyncWorkaround(calls, safe.implementation.value)
+      .then(setSafeTx)
+      .catch(setSafeTxError)
+  }, [batchTxs, setSafeTx, setSafeTxError, safe.implementation.value])
 
   return <ReviewTransaction {...props} title="Confirm batch" />
 }
