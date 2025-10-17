@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 import type { ReactElement } from 'react'
 import type { SafeTransaction } from '@safe-global/types-kit'
 import type { SafeAppsTxParams } from '.'
-import { createMultiSendCallOnlyTx, createTx } from '@/services/tx/tx-sender'
+import { createMultiSendCallOnlyTxWithZkSyncWorkaround, createTx } from '@/services/tx/tx-sender'
 import useHighlightHiddenTab from '@/hooks/useHighlightHiddenTab'
 import { SafeTxContext } from '@/components/tx-flow/SafeTxProvider'
 import { isTxValid } from '@/components/safe-apps/utils'
@@ -10,6 +10,7 @@ import ErrorMessage from '@/components/tx/ErrorMessage'
 import ReviewTransaction from '@/components/tx/ReviewTransactionV2'
 import { type ReviewTransactionContentProps } from '@/components/tx/ReviewTransactionV2/ReviewTransactionContent'
 import { getTxOrigin } from '@/utils/transactions'
+import useSafeInfo from '@/hooks/useSafeInfo'
 
 type ReviewSafeAppsTxProps = {
   safeAppsTx: SafeAppsTxParams
@@ -23,13 +24,17 @@ const ReviewSafeAppsTx = ({
   ...props
 }: ReviewSafeAppsTxProps): ReactElement => {
   const { setSafeTx, safeTxError, setSafeTxError, setTxOrigin } = useContext(SafeTxContext)
+  const { safe } = useSafeInfo()
 
   useHighlightHiddenTab()
 
   useEffect(() => {
     const createSafeTx = async (): Promise<SafeTransaction> => {
       const isMultiSend = txs.length > 1
-      const tx = isMultiSend ? await createMultiSendCallOnlyTx(txs) : await createTx(txs[0])
+
+      const tx = isMultiSend
+        ? await createMultiSendCallOnlyTxWithZkSyncWorkaround(txs, safe.implementation.value)
+        : await createTx(txs[0])
 
       if (params?.safeTxGas !== undefined) {
         // FIXME: do it properly via the Core SDK
@@ -46,7 +51,7 @@ const ReviewSafeAppsTx = ({
         setTxOrigin(getTxOrigin(app))
       })
       .catch(setSafeTxError)
-  }, [txs, setSafeTx, setSafeTxError, setTxOrigin, app, params])
+  }, [txs, setSafeTx, setSafeTxError, setTxOrigin, app, params, safe.implementation.value])
 
   const error = !isTxValid(txs)
 
