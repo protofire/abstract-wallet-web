@@ -36,10 +36,8 @@ const ReviewSafeAppsTx = ({
         ? await createMultiSendCallOnlyTxWithZkSyncWorkaround(txs, safe.implementation.value)
         : await createTx(txs[0])
 
-      if (params?.safeTxGas !== undefined) {
-        // FIXME: do it properly via the Core SDK
-        // @ts-expect-error safeTxGas readonly
-        tx.data.safeTxGas = params.safeTxGas
+      if (params?.safeTxGas !== undefined && !Number.isNaN(params.safeTxGas)) {
+        tx.data.safeTxGas = String(params.safeTxGas)
       }
 
       return tx

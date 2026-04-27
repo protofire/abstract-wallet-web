@@ -1,9 +1,7 @@
 import { Box, Tooltip, Button, SvgIcon } from '@mui/material'
 import { formatDistanceToNow } from 'date-fns'
-import { getIndexingStatus } from '@safe-global/safe-gateway-typescript-sdk'
-import useAsync from '@safe-global/utils/hooks/useAsync'
+import { useChainsGetIndexingStatusV1Query } from '@safe-global/store/gateway/AUTO_GENERATED/chains'
 import useChainId from '@/hooks/useChainId'
-import useIntervalCounter from '@/hooks/useIntervalCounter'
 import { OpenInNewRounded } from '@mui/icons-material'
 import { IS_PRODUCTION } from '@/config/constants'
 
@@ -15,15 +13,13 @@ const POLL_INTERVAL = 1000 * 60 // 1 minute
 
 const useIndexingStatus = () => {
   const chainId = useChainId()
-  const [count] = useIntervalCounter(POLL_INTERVAL)
 
-  return useAsync(
-    () => {
-      if (count === undefined) return
-      return getIndexingStatus(chainId)
+  return useChainsGetIndexingStatusV1Query(
+    { chainId },
+    {
+      pollingInterval: POLL_INTERVAL,
+      skipPollingIfUnfocused: true,
     },
-    [chainId, count],
-    false,
   )
 }
 
@@ -55,9 +51,9 @@ const getStatus = (synced: boolean, lastSync: number) => {
 }
 
 const IndexingStatus = () => {
-  const [data] = useIndexingStatus()
+  const { data, isLoading, isError } = useIndexingStatus()
 
-  if (!data) {
+  if (isLoading || isError || !data) {
     return null
   }
 

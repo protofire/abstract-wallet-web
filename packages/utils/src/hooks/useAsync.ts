@@ -12,7 +12,7 @@ const useAsync = <T>(
   const [error, setError] = useState<Error>()
   const [loading, setLoading] = useState<boolean>(false)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps, react-hooks/use-memo
   const callback = useCallback(asyncCall, dependencies)
 
   useEffect(() => {
