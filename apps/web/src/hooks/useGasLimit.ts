@@ -55,6 +55,25 @@ const incrementByGasMultiplier = (value: bigint, multiplier: number) => {
 }
 
 /**
+ * Checks if a Safe is on zkSync based on its implementation address
+ * @param implementationAddress - The Safe implementation address to check
+ * @returns true if the Safe is on zkSync, false otherwise
+ */
+export const isSafeZkSync = (implementationAddress: string): boolean => {
+  const zkSyncImplementationAddresses = [
+    '0x1727c2c531cf966f902E5927b98490fDFb3b2b70',
+    '0xB00ce5CCcdEf57e539ddcEd01DF43a13855d9910',
+    '0x610fcA2e0279Fa1F8C00c8c2F71dF522AD469380',
+    '0xC35F063962328aC65cED5D4c3fC5dEf8dec68dFa',
+  ]
+
+  const normalizedAddress = implementationAddress.trim().toLowerCase()
+  const normalizedZkSyncAddresses = zkSyncImplementationAddresses.map((addr) => addr.toLowerCase())
+
+  return normalizedZkSyncAddresses.includes(normalizedAddress)
+}
+
+/**
  * Estimates the gas limit for a transaction that will be executed on the zkSync network.
  *
  *  The rpc call for estimateGas is failing for the zkSync network, when the from address
@@ -94,12 +113,14 @@ const getGasLimitForZkSync = async (
     safeProvider,
     safeVersion,
     customContracts,
+    deploymentType: 'zksync',
   })
 
   const simulateTxAccessorContract = await getSimulateTxAccessorContract({
     safeProvider,
     safeVersion,
     customContracts,
+    deploymentType: 'zksync',
   })
 
   // 2. Add a simulate call to the predicted SafeProxy as second transaction
@@ -162,10 +183,7 @@ const useGasLimit = (
 
     // if we are dealing with zksync and the walletAddress is a Safe, we have to do some magic
     // FIXME a new check to indicate ZKsync chain will be added to the config service and available under ChainInfo
-    if (
-      (safe.chainId === chains.zksync || safe.chainId === chains.lens) &&
-      (await web3ReadOnly.getCode(walletAddress)) !== '0x'
-    ) {
+    if (isSafeZkSync(safe.implementation.value ?? '0x') && (await web3ReadOnly.getCode(walletAddress)) !== '0x') {
       return getGasLimitForZkSync(safe, web3ReadOnly, safeSDK, safeTx)
     }
 

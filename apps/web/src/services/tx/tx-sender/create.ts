@@ -25,6 +25,66 @@ export const createMultiSendCallOnlyTx = async (txParams: MetaTransactionData[])
   return safeSDK.createTransaction({ transactions: txParams, onlyCalls: true })
 }
 
+/**
+ * Create a multiSendCallOnly transaction with zkSync workaround
+ * If the Safe is on zkSync, it will use the correct MultiSendCallOnly address
+ */
+export const createMultiSendCallOnlyTxWithZkSyncWorkaround = async (
+  txParams: MetaTransactionData[],
+  safeImplementationAddress?: string,
+): Promise<SafeTransaction> => {
+  const safeSDK = getAndValidateSafeSDK()
+
+  // Import the isSafeZkSync function dynamically to avoid circular dependencies
+  const { isSafeZkSync } = await import('@/hooks/useGasLimit')
+
+  // If this is a zkSync Safe, we need to create the transaction with the correct address
+  if (safeImplementationAddress && isSafeZkSync(safeImplementationAddress)) {
+    // Define the address mappings for zkSync
+    const addressMappings = {
+      '0xA1dabEF33b3B82c7814B6D82A79e50F4AC44102B': '0xf220D3b4DFb23C4ade8C88E526C1353AbAcbC38F',
+      '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D': '0xf220D3b4DFb23C4ade8C88E526C1353AbAcbC38F',
+      '0x9641d764fc13c8B624c04430C7356C1C7C8102e2': '0x0408EF011960d02349d50286D20531229BCef773',
+    }
+
+    // Create the transaction normally first
+    const transaction = await safeSDK.createTransaction({ transactions: txParams, onlyCalls: true })
+
+    // Check if the transaction is going to a wrong address that needs correction
+    const wrongAddress = transaction.data.to
+    const correctAddress = addressMappings[wrongAddress as keyof typeof addressMappings]
+
+    if (correctAddress) {
+      // Get the MultiSendCallOnly contract from the contract manager
+      const contractManager = safeSDK.getContractManager()
+      const multiSendCallOnlyContract = contractManager.multiSendCallOnlyContract
+
+      if (multiSendCallOnlyContract) {
+        // The transaction.data.data already contains the encoded MultiSend call
+        // We just need to change the target address and use DelegateCall operation
+        const correctedTx = {
+          to: correctAddress,
+          value: '0',
+          data: transaction.data.data, // Use the original MultiSend data directly
+          operation: 1, // DelegateCall operation (like the working transaction)
+          safeTxGas: transaction.data.safeTxGas || 0,
+          baseGas: transaction.data.baseGas || 0,
+          gasPrice: transaction.data.gasPrice || 0,
+          gasToken: transaction.data.gasToken || '0x0000000000000000000000000000000000000000',
+          refundReceiver: transaction.data.refundReceiver || '0x0000000000000000000000000000000000000000',
+          nonce: transaction.data.nonce,
+        }
+
+        // Create a new SafeTransaction with the corrected data
+        return safeSDK.createTransaction({ transactions: [correctedTx] })
+      }
+    }
+  }
+
+  // For non-zkSync or if address is already correct, create normally
+  return safeSDK.createTransaction({ transactions: txParams, onlyCalls: true })
+}
+
 export const createRemoveOwnerTx = async (txParams: RemoveOwnerTxParams): Promise<SafeTransaction> => {
   const safeSDK = getAndValidateSafeSDK()
   return safeSDK.createRemoveOwnerTx(txParams)
