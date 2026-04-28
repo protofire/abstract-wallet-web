@@ -13,7 +13,6 @@ import {
   gtmSetUserProperty,
   gtmTrack,
 } from '@/services/analytics/gtm'
-//import { spindlInit, spindlAttribute } from './spindl'
 import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 import useChainId from '@/hooks/useChainId'
@@ -39,11 +38,6 @@ const useGtm = () => {
   const safeAddress = useSafeAddress()
   const wallet = useWallet()
   const isSpaceRoute = useIsSpaceRoute()
-
-  // Initialize GTM and Spindl
-  useEffect(() => {
-    //spindlInit()
-  }, [])
 
   // Enable GA cookies if consent was given
   useEffect(() => {
@@ -95,8 +89,7 @@ const useGtm = () => {
 
   useEffect(() => {
     if (wallet?.address) {
-      gtmSetUserProperty(AnalyticsUserProperties.WALLET_ADDRESS, wallet.address)
-      //spindlAttribute(wallet.address)
+      gtmSetUserProperty(AnalyticsUserProperties.WALLET_ADDRESS, wallet.address.slice(2)) // Remove 0x prefix because GA converts it to a number otherwise
     }
   }, [wallet?.address])
 

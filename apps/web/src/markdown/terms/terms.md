@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Last updated: April, 2025
+Last updated: October, 2025
 
 [1\. What is the scope of the Terms?](#1.-what-is-the-scope-of-the-terms?)
 
@@ -24,7 +24,7 @@ Last updated: April, 2025
 
 [11\. Are we responsible for the issuance of the Safe Token and any related functionalities or reward programs?](#11.-are-we-responsible-for-the-issuance-of-the-safe-token-and-any-related-functionalities-or-reward-programs?)
 
-[12\. What is Cloud Storage and the Spaces feature?](#12.-what-is-cloud-storage-and-the-spaces-feature?)
+[12\. Are we responsible for third-party content and services?](#12.-are-we-responsible-for-third-party-content-and-services?)
 
 [13\. Can we terminate or limit your right to use our Services?](#13.-can-we-terminate-or-limit-your-right-to-use-our-services?)
 
@@ -66,13 +66,15 @@ Last updated: April, 2025
 
 # 1\. What is the scope of the Terms? {#1.-what-is-the-scope-of-the-terms?}
 
-These Terms and Conditions (“**Terms**”) become part of any contract (“**Agreement**”) between you (“**you**”, “**yours**” or “**User**”) and Core Contributors GmbH (“**CC**”, “**we**”, “**our**” or “**us**”) provided we made these Terms accessible to you prior to entering into the Agreement and you consent to these Terms. We are a limited liability company registered with the commercial register of Berlin Charlottenburg under company number HRB 240421 B, with its registered office at c/o WeWork, Dircksenstr. 3, 10179 Berlin, Germany. You can contact us by writing to info@cc0x.dev.
+These Terms and Conditions (“**Terms**”) become part of any contract (“**Agreement**”) between you (“**you**”, “**yours**” or “**User**”) and Safe Labs GmbH (“**Safe Labs**”, “**we**”, “**our**” or “**us**”) provided we made these Terms accessible to you prior to entering into the Agreement and you consent to these Terms. We are a limited liability company registered with the commercial register of Berlin Charlottenburg under company number HRB 270980 B, with its registered office at Unter den Linden 10, 10117 Berlin. 
+
+For the avoidance of doubt, this Agreement is exclusively concluded with Safe Labs. Through this Agreement of the use of our Services, no contractual relationship whatsoever is concluded with Core Contributors GmbH. Further, please note that Safe Labs is not a legal successor of Core Contributors GmbH and does not assume any liability or responsibility for Core Contributors GmbH.
 
 The Agreement is concluded by using the Mobile App, Web App and/or Browser Extension subject to these Terms. The use of our Services is only permitted to legal entities, partnerships and natural persons with unlimited legal capacity. In particular, minors are prohibited from using our Services.
 
-The application of your general terms and conditions is excluded. Your deviating, conflicting or supplementary general terms and conditions shall only become part of the Agreement if and to the extent that CC has expressly agreed to their application in writing. This consent requirement shall apply in any case, even if for example CC, being aware of your general terms and conditions, accepts payments by the contractual partner without reservations.
+The application of your general terms and conditions is excluded. Your deviating, conflicting or supplementary general terms and conditions shall only become part of the Agreement if and to the extent that Safe Labs has expressly agreed to their application in writing. This consent requirement shall apply in any case, even if for example Safe Labs, being aware of your general terms and conditions, accepts payments by the contractual partner without reservations.
 
-We reserve the right to change these Terms at any time and without giving reasons, while considering and weighing your interests. The new Terms will be communicated to you in advance. If you do not accept the new Terms, you are no longer entitled to use the Services.
+We reserve the right to change these Terms at any time and without giving reasons, while considering and weighing your interests. The new Terms will be communicated to you in advance. If you do not accept the new Terms, you are no longer entitled to use the Services. 
 
 # 2\. What do some of the capitalized terms mean in the Agreement? {#2.-what-do-some-of-the-capitalized-terms-mean-in-the-agreement?}
 
@@ -98,7 +100,7 @@ Our services (“**Services**”) primarily consist of enabling users to create 
 
 1. “**Safe Account**”
 
-A Safe Account is a modular, self-custodial (i.e. not supervised by us) smart contract-based wallet not provided by CC. Safe Accounts are open-source released under LGPL-3.0.
+A Safe Account is a modular, self-custodial (i.e. not supervised by us) smart contract-based wallet not provided by Safe Labs. Safe Accounts are open-source released under LGPL-3.0.
 
 Smart contract wallet means, unlike a standard private key Wallet, that access control for authorizing any Transaction is defined in code. An example are multi-signature wallets which require that any Transaction must be signed by a minimum number of signing wallets whereby the specifics of the requirements to authorize a Transaction can be configured in code.
 
@@ -124,7 +126,7 @@ Our Services do not consist of:
 
 4. the storage or transmission of fiat currencies;
 
-5. back-up services to recover your Recovery Phrase or Private Keys, for whose safekeeping you are solely responsible; CC has no means to recover your access to your Tokens, when you lose access to your Safe Account;
+5. back-up services to recover your Recovery Phrase or Private Keys, for whose safekeeping you are solely responsible; Safe Labs has no means to recover your access to your Tokens, when you lose access to your Safe Account;
 
 6. any form of legal, financial, investment, accounting, tax or other professional advice regarding Transactions and their suitability to you;
 
@@ -140,27 +142,15 @@ Our Services do not consist of:
 
 # 5\. What do you need to know about Third-Party Safe Apps and Third-Party Services? {#5.-what-do-you-need-to-know-about-third-party-safe-apps-and-third-party-services?}
 
-1. You may view, have access to, and may use Third-Party Safe Apps and Third-Party Services within the Safe{Wallet} App. You view, access, or use Third-Party Safe Apps and Third-Party Services at your own election. Your reliance on Third-Party Safe Apps and Third-Party Services is subject to separate terms and conditions set forth by the applicable third party content and/or service provider (“Third-Party Terms”). Third-Party Terms may, amongst other things,
+1. We provide you the possibility to interact with your Safe Account through Third-Party Services. Any activities you engage in with, or services you receive from a third party is between you and that third party directly. The conditions of service provisions, if any, shall be governed by the applicable contractual provisions between you and the respective provider of the Third-Party Service.
 
-   1. involve separate fees and charges,
+2. The Services rely in part on third-party and open-source software, including the Blockchain, and the continued development and support by third parties. There is no assurance or guarantee that those third parties will maintain their support of their software or that open-source software will continue to be maintained. This may have a material adverse effect on the Services.
 
-   2. include disclaimers or risk warnings,
-
-   3. apply a different terms and privacy policy.
-
-2. It is your responsibility to understand the Third-Party Terms, including how Third-Party Safe Apps and Third-Party Services use any of your information under their privacy policies.
-
-3. Third-Party Safe Apps and Third-Party Services are provided for your convenience only. We do not verify or control Third-Party Safe Apps and Third-Party Services.
-
-4. If we offer access to Third-Party Safe Apps and Third-Party Services in the Safe App free of charge by us (third-parties may charge separate fees), the liability for providing access to such Third-Party Safe Apps and Third-Party Services is limited pursuant to Section 18 below. Furthermore we reserve the right to cease to provide access to those Third-Party Safe Apps and Third-Party Services through the Safe{Wallet} App without notice.
-
-5. The Services rely in part on third-party and open-source software, including the Blockchain, and the continued development and support by third parties. There is no assurance or guarantee that those third parties will maintain their support of their software or that open-source software will continue to be maintained. This may have a material adverse effect on the Services.
-
-6. This means specifically:
+3. This means specifically:
 
 * We do not have any oversight over your activities with Third-Party Services especially by using Third-Party Safe Apps, and therefore we do not and cannot make any representation regarding their appropriateness and suitability for you.
 
-* Third-Party Safe Apps and Third-Party Services are not hosted, owned, controlled or maintained by us. We also do not participate in the Transaction and will not and cannot monitor, verify, censor or edit the functioning or content of any Third-Party Safe Apps and Third-Party Service.
+* Third-Party Safe Apps and Third-Party Services are not hosted, owned, controlled or maintained by us. We also do not participate in the Transaction and will not and cannot monitor, verify, censor or edit the functioning or content of any Third-Party Safe Apps and Third-Party Services.
 
 * We have not conducted any security audit, bug bounty or formal verification (whether internal or external) of the Third-Party Safe Apps and Third-Party Services.
 
@@ -170,11 +160,11 @@ Our Services do not consist of:
 
 * You know of the inherent risks of cryptographic and Blockchain-based systems and the high volatility of Token markets. Transactions undertaken in the Blockchain are irrevocable and irreversible and there is no possibility to refund Token that have been deployed.
 
-* You should read the license requirements, terms and conditions as well as privacy policy of each Third-Party Safe Apps and Third-Party Service that you access or use. Certain Third-Party Safe Apps and Third-Party Services may involve complex Transactions that entail a high degree of risk.
+* You should read the license requirements, terms and conditions as well as privacy policy of each Third-Party Safe App and Third-Party Service that you access or use. Certain Third-Party Safe Apps and Third-Party Services may involve complex Transactions that entail a high degree of risk.
 
 * If you contribute integrations to Third-Party Safe Apps and Third-Party Services, you are responsible for all content you contribute, in any manner, and you must have all rights necessary to do so, in the manner in which you contribute it. You are responsible for all your activity in connection with any such Third-Party Safe Apps and Third-Party Services.
 
-* Your interactions with persons found on or through the Third-Party Safe Apps and and Third-Party Services, including payment and delivery of goods and services, financial transactions, and any other terms associated with such dealings, are solely between you and such persons. You agree that we shall not be responsible or liable for any loss or damage of any sort incurred as the result of any such dealings.
+* Your interactions with persons found on or through the Third-Party Safe Apps and Third-Party Services, including payment and delivery of goods and services, financial transactions, and any other terms associated with such dealings, are solely between you and such persons. You agree that we shall not be responsible or liable for any loss or damage of any sort incurred as the result of any such dealings.
 
 * If there is a dispute between you and the Third-Party Safe Apps or Third-Party Services provider or/and other users of the Third-Party Safe Apps or Third-Party Service, you agree that we are under no obligation to become involved. In the event that you have a dispute with one or more other users, you release us, our officers, employees, agents, contractors and successors from claims, demands, and damages of every kind or nature, known or unknown, suspected or unsuspected, disclosed or undisclosed, arising out of or in any way related to such disputes and/or our Services.
 
@@ -182,7 +172,7 @@ Our Services do not consist of:
 
 1. The use of the Abstract Safe Wallet App, Third-Party Safe Apps or Third-Party Services may cause fees, including network fees, as indicated in the respective app. CC has no control over the fees charged by the Third-Party Safe Apps or Third Party Services. CC may change its own fees at any time. Price changes will be communicated to the User in due time before taking effect.
 
-2. The User is only entitled to offset and/or assert rights of retention if his counterclaims are legally established, undisputed or recognized by CC.
+2. The User is only entitled to offset and/or assert rights of retention if his counterclaims are legally established, undisputed or recognized by Safe Labs.
 
 # 7\. Are we responsible for the security of your Private Keys, Recovery Phrase or other credentials? {#7.-are-we-responsible-for-the-security-of-your-private-keys,-recovery-phrase-or-other-credentials?}
 
@@ -196,7 +186,7 @@ Our Services do not consist of:
 
 1. We shall not be responsible for recovering your Safe Account.
 
-2. You are solely responsible for securing a back-up of your Safe Account access as you see fit.
+2. You are solely responsible for securing a back-up of your Safe Account access as you see fit. 
 
 3. Any recovery feature we provide access to within the Abstract Safe Wallet App is a mechanism controlled by your Safe Account on the Blockchain, both of which we don’t have any influence over once you have set it up. We will never act as a recoverer ourselves and don’t offer recovery services. The Self Custodial Recovery feature allows you to determine your own recovery setup and nominate anyone including yourself as your recoverer. The recoverer can start the recovery process at any time. Please note that we are not responsible for notifying you of this process (see Section 7 above). Furthermore we reserve the right to cease the access to the Self Custodial Recovery feature via our Abstract Safe Wallet App taking the user’s reasonable interests into account and providing due notification.
 
@@ -206,7 +196,7 @@ Our Services do not consist of:
 
 1. We shall not be responsible for notifying you of any interactions or events occurring in your Safe Account, be it on the Blockchain, third-party interfaces, within any other infrastructure, or our Services.
 
-2. You are responsible for monitoring Safe Account as you see fit.
+2. You are responsible for monitoring Safe Account as you see fit. 
 
 3. Any notification service we provide or offer for subscription within the Abstract Safe Wallet App via e-mail or push notifications or any other means of communication is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the notification feature from time to time or cease to provide them without notice.
 
@@ -226,33 +216,21 @@ Our Services do not consist of:
 
 3. Any interface we provide that allows you to claim or delegate your Safe Tokens or to participate in any third party program related to Safe Tokens is provided free of charge and we exclude any and all liability for the correctness, completeness, speed or timeliness of these services. Furthermore we reserve the right to change the feature from time to time or cease to provide them without notice.
 
-# 12\. What is Cloud Storage and the Spaces feature? {#12.-what-is-cloud-storage-and-the-spaces-feature?}
+# 12\. Are we responsible for third-party content and services? {#12.-are-we-responsible-for-third-party-content-and-services?}
 
-1. We offer an optional cloud storage service for user created metadata to improve user experience and data management called Spaces. By opting into this service, your metadata, which is by default stored in your browser's local storage, will instead be stored in our private database. The metadata may include, amongst other things:
+1. You may view, have access to, and may use third-party content and services, for example widget integrations, within the Safe{Wallet} App (“Third-Party Features”). You view, access, or use Third-Party Features at your own election. Your reliance on Third-Party Features is subject to separate terms and conditions set forth by the applicable third party content and/or service provider (“Third-Party Terms”). Third-Party Terms may, amongst other things,
 
-   1. Safe Accounts you created;
+   1. involve separate fees and charges, 
 
-   2. Counterfactual Safe Accounts you created;
+   2. include disclaimers or risk warnings, 
 
-   3. Address book you created;
+   3. apply a different terms and privacy policy. 
 
-   4. Safe names you attributed;
+   It is your responsibility to understand the Third-Party Terms, including how Third-Party Features use any of your information under their privacy policies.
 
-   5. Signer names you attributed;
+2. Third Party Features are provided for your convenience only. We do not verify, curate, or control Third Party Features. 
 
-   6. Watchlist you created (read-only Safe Accounts).
-
-2. The cloud storage also allows you to share your metadata with others by creating a shared set of metadata (“Spaces”), adding other users’ Wallet addresses to this Space, and them accepting. By creating or joining a Space, users acknowledge and agree to the following:
-
-* Users are solely responsible for verifying the identity of members they add to a Space. Users must not add others without their explicit consent. We do not verify or endorse Spacemembers or their actions.
-
-* Users must ensure that any metadata they add or share within aSpace complies with all applicable laws and regulations, including but not limited to data protection laws.
-
-* Users must not share or store metadata that is unlawful, fraudulent, misleading, or violates the rights of any third party. We do not assume any responsibility for any metadata shared within a Space.
-
-* We do not intend for users to process personal data via this feature. However, if a user chooses to process personal data within a Space , they are responsible for ensuring compliance with applicable data protection laws. In such cases, the user must inform us in advance and request a Data Processing Agreement (DPA). We reserve the right to refuse or impose conditions on such data processing.
-
-3. Any cloud storage of metadata we provide or offer within the Safe{Wallet} App is provided free of charge and liability is limited pursuant to Section 18 below. Furthermore we reserve the right to change the feature from time to time or cease to provide it with one week notice, prompting the deletion of your metadata from our database while retaining a copy in your local browser storage.
+3. If we offer access to Third-Party Features in the Safe{Wallet} App free of charge by us (Third-Parties may charge separate fees), the liability for providing access to such Third-Party Feature is limited pursuant to Section 18 below. Furthermore we reserve the right to cease to provide access to those Third-Party Features through the Safe{Wallet} App without notice.
 
 # 13\. Can we terminate or limit your right to use our Services? {#13.-can-we-terminate-or-limit-your-right-to-use-our-services?}
 
@@ -276,7 +254,7 @@ You may terminate the Agreement at any time without notice.
 
 2. If you use the Abstract Safe Wallet App via web browser, the strict liability of CC for damages (sec. 536a German Civil Code) for defects existing at the time of conclusion of the contract is precluded.
 
-3. The foregoing provisions will not limit CC’s liability as defined in Clause 18\.
+3. The foregoing provisions will not limit Safe Labs’ liability as defined in Clause 18\.
 
 4. We reserve the right to change the format and features of the Services by making any updates to Services available for you to download or, where your device settings permit it, by automatic delivery of updates.
 
@@ -329,7 +307,7 @@ By using our Services you hereby agree, represent and warrant that:
 
 1. We endeavor to provide our Service free from material bugs, security vulnerabilities or viruses.
 
-2. You are responsible for configuring your information technology and computer programmes to access our Services and to use your own virus protection software.
+2. You are responsible for configuring your information technology and computer programmes to access our Services and to use your own virus protection software. Insofar as the use of the Services, in particular the use of a Safe{Wallet} App demands certain device or system requirements, compliance with these requirements is the sole responsibility of the User.
 
 3. If you become aware of any exploits, bugs or vulnerabilities, please inform bounty@safe.global.
 
@@ -339,7 +317,7 @@ By using our Services you hereby agree, represent and warrant that:
 
 1. We may update and change our Services from time to time. We may suspend or withdraw or restrict the availability of all or any part of our Services for business, operational or regulatory reasons or because of a Force Majeure Event at no notice.
 
-2. A “Force Majeure Event” shall mean any event, circumstance or cause beyond our reasonable control, which prevents, hinders or delays the provision of our Services or makes their provision impossible or onerous, including, without limitation:
+2. A “Force Majeure Event" shall mean any external event that is caused by elementary natural forces or acts of third parties, which is unforeseeable according to human insight and experience, and that cannot be prevented or rendered harmless by economically reasonable means even by exercising the utmost care reasonably to be expected under the circumstances, and which Safe Labs may not have to accept due to its frequency, and which prevents, hinders or delays the provision of our Services or makes their provision impossible, including, without limitation:
 
 * acts of God, flood, storm, drought, earthquake or other natural disaster;
 
@@ -357,7 +335,7 @@ By using our Services you hereby agree, represent and warrant that:
 
 * strike, industrial action or lockout.
 
-3. We shall not be liable or responsible to you, or be deemed to have defaulted under or breached this Agreement, for any failure or delay in the provision of the Services or the performance of this Agreement, if and to the extent such failure or delay is caused by or results from or is connected to acts beyond our reasonable control, including the occurrence of a Force Majeure Event.
+3. Notwithstanding the limitations provided in Clause 18.1 and 18.3, we shall not be liable or responsible to you, or be deemed to have defaulted under or breached this Agreement, for any failure or delay in the provision of the Services or the performance of this Agreement, if and to the extent such failure or delay is caused by or results from or is connected to a Force Majeure Event for which Safe Labs bears no responsibility whatsoever.
 
 # 21\. Who is responsible for your tax liabilities? {#21.-who-is-responsible-for-your-tax-liabilities?}
 
@@ -397,8 +375,8 @@ The Agreement including these Terms shall be governed by German law. The applica
 
 If you want to learn more about Safe Accounts or the Service or have any problems using them or have any complaints please get in touch via any of the following channels:
 
-1. Intercom: https://help.safe.global
-2. Discord: https://chat.safe.global
+1. Intercom: https://help.safe.global  
+2. Discord: https://chat.safe.global  
 3. Twitter: https://twitter.com/safe
 
 # 30\. Where is the place of legal proceedings? {#30.-where-is-the-place-of-legal-proceedings?}
