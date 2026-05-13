@@ -10,8 +10,8 @@ export const IS_TEST_E2E = APP_ENV === 'cypress'
 export const COMMIT_HASH = process.env.NEXT_PUBLIC_COMMIT_HASH || ''
 
 // default chain ID's as provided to the environment
-export const DEFAULT_TESTNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_TESTNET_CHAIN_ID ?? chains.abstract)
-export const DEFAULT_MAINNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_MAINNET_CHAIN_ID ?? chains.abstract)
+export const DEFAULT_TESTNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_TESTNET_CHAIN_ID ?? chains['abstract-sepolia'])
+export const DEFAULT_MAINNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_MAINNET_CHAIN_ID ?? chains['abstract'])
 
 // default chain ID used in the application
 export const DEFAULT_CHAIN_ID = IS_PRODUCTION ? DEFAULT_MAINNET_CHAIN_ID : DEFAULT_TESTNET_CHAIN_ID
