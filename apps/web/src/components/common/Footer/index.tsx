@@ -8,9 +8,16 @@ import { AppRoutes } from '@/config/routes'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import { HELP_PROTOFIRE_URL } from '@/config/constants'
-import packageJson from '../../../../package.json'
+import { APP_VERSION, APP_HOMEPAGE } from '@/config/version'
+import { BRAND_NAME, IS_PRODUCTION, COMMIT_HASH } from '@/config/constants'
+import { PROTOFIRE_SUPPORT_LINK } from '@/config/constants.extra'
+import darkPalette from '@/components/theme/darkPalette'
+import TEMPLATE_CONFIG from '@/config/templateConfig'
+import { findTemplateLink } from '@/utils/templateConfig'
+import DiscordIcon from '@/public/images/common/discord-icon.svg'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import type { FooterProps } from './footer.type'
+import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 
 const footerPages = [
   AppRoutes.settings.index,
@@ -33,11 +40,12 @@ const FooterLink = ({ children, href }: { children: ReactNode; href: string }): 
 
 const Footer: React.FC<FooterProps> = ({
   forceShow,
-  // preferences = true,
+  preferences = true,
   versionIcon = true,
   helpCenter = true,
   className = css.container,
 }): ReactElement | null => {
+  const isOfficialHost = useIsOfficialHost()
   const router = useRouter()
   const initialYear = 2025
   const currentYear = new Date().getFullYear()
@@ -54,6 +62,7 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <footer className={className}>
       <ul>
+        {isOfficialHost ? (
           <>
             <li>
               <Typography variant="caption">&copy;{copyrightYear} Abstract Safe</Typography>
@@ -61,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({
             <li>
               <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
             </li>
-             {/* <li>
+             <li>
               <FooterLink href={getHref(AppRoutes.privacy)}>Privacy</FooterLink>
             </li>
             <li>
@@ -69,15 +78,15 @@ const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
-            </li> */}
+            </li>
             <li>
               <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
             </li>
-            {/* {preferences && (
+            {preferences && (
               <li>
                 <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
               </li>
-            )} */}
+            )}
             {helpCenter && (
               <li>
                 <ExternalLink href={HELP_PROTOFIRE_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
@@ -85,10 +94,56 @@ const Footer: React.FC<FooterProps> = ({
                 </ExternalLink>
               </li>
             )}
+            </>
+            ) : (
+              <>
+                <li>
+                  <Typography variant="caption">
+                    {TEMPLATE_CONFIG.IS_LICENSED
+                      ? 'This is a Safe{Wallet} Partner website'
+                      : '©' + new Date().getFullYear() + ' ' + BRAND_NAME}
+                  </Typography>
+                </li>
+    
+                {TEMPLATE_CONFIG.EXTRA_FOOTER_LINKS?.map((link, index) => {
+                  return (
+                    <li key={index}>
+                      <ExternalLink href={link.link} noIcon>
+                        {link.label.toLowerCase() === 'discord' && (
+                          <SvgIcon component={DiscordIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} />
+                        )}
+                        {link.label}
+                      </ExternalLink>
+                    </li>
+                  )
+                })}
+                {TEMPLATE_CONFIG.IS_LICENSED && (
+                  <li>
+                    <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
+                  </li>
+                )}
+                <li>
+                  <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
+                </li>
+                {!findTemplateLink('Terms') && (
+                  <li>
+                    <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
+                  </li>
+                )}
+                <li>
+                  <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
+                </li>
+                <li>
+                  <ExternalLink href={PROTOFIRE_SUPPORT_LINK} noIcon sx={{ span: { textDecoration: 'underline' } }}>
+                    Help
+                  </ExternalLink>
+                </li>
+              </>
+            )}
             <li>
-              <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} noIcon>
-                {versionIcon && <SvgIcon component={GitHubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} />} v
-                {packageJson.version}
+              <ExternalLink href={`${APP_HOMEPAGE}/releases/tag/v${APP_VERSION}`} noIcon>
+                {versionIcon && <SvgIcon component={GitHubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} />}v
+                {APP_VERSION}
               </ExternalLink>
             </li>
             <li>
@@ -100,22 +155,22 @@ const Footer: React.FC<FooterProps> = ({
                   fontSize="small"
                   sx={{ verticalAlign: 'middle', mx: 0.5 }}
                 />
-                <ExternalLink
-                  href="https://protofire.io/services/solution/safe-deployment"
-                  sx={{ textDecoration: 'none' }}
-                  noIcon
-                >
+                <MUILink href="https://protofire.io" sx={{ color: darkPalette.primary.main, textDecoration: 'none' }}>
                   Protofire
-                </ExternalLink>
+                </MUILink>
               </Typography>
             </li>
-          </>
-          {/* <li>
-            <AppstoreButton placement="footer" />
-          </li> */}
-        </ul>
-      </footer>
-    )
-}
+    
+            {!IS_PRODUCTION && COMMIT_HASH && (
+              <li>
+                <ExternalLink href={`${APP_HOMEPAGE}/commit/${COMMIT_HASH}`} noIcon>
+                  {COMMIT_HASH.slice(0, 7)}
+                </ExternalLink>
+              </li>
+            )}
+          </ul>
+        </footer>
+      )
+    }
 
 export default Footer
