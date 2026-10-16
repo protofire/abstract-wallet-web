@@ -9,6 +9,7 @@ import SideDrawer from './SideDrawer'
 import { useIsSidebarRoute } from '@/hooks/useIsSidebarRoute'
 import { TxModalContext } from '@/components/tx-flow'
 import BatchSidebar from '@/components/batch/BatchSidebar'
+import SunsetBanner from '@/components/common/SunsetBanner'
 import Breadcrumbs from '@/components/common/Breadcrumbs'
 import { AppRoutes } from '@/config/routes'
 
@@ -45,6 +46,8 @@ const PageLayout = ({ pathname, children }: { pathname: string; children: ReactE
           [css.mainNoHeader]: hideHeader,
         })}
       >
+        <SunsetBanner />
+
         <div className={css.content}>
           <SafeLoadingError>
             {!hideHeader && <Breadcrumbs />}
