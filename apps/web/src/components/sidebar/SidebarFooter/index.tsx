@@ -107,11 +107,7 @@ const SidebarFooter = (): ReactElement => {
               fontSize="small"
               sx={{ verticalAlign: 'middle', mx: 0.5 }}
             />
-            <ExternalLink
-              href="https://protofire.io/services/solution/safe-deployment"
-              sx={{ textDecoration: 'none' }}
-              noIcon
-            >
+            <ExternalLink href="https://safe.protofire.io" sx={{ textDecoration: 'none' }} noIcon>
               Protofire
             </ExternalLink>
           </Typography>
